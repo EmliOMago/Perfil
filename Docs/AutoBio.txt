@@ -1,0 +1,16 @@
+Sou Emli O’Mago - desenvolvedor solo e produtor artístico multidisciplinar. Eu uno engenharia de software + direção de arte + produção cultural para entregar projetos completos, do conceito ao lançamento, com identidade própria e execução consistente.
+Minha base vem de mais de uma década criando e sustentando projetos coletivos: participei do Complexo de Artes Trema (CA Trema) desde a fundação (nov/2012), atuando como diretor artístico e coordenador, em pesquisa/extensão e ações de retorno à comunidade em São Carlos (UFSCar), além de fomentar produção cultural e economia local.
+Na prática, isso significou dominar organização, comunicação, curadoria e entrega: participei da produção de festivais e eventos de médio e grande porte (ex.: Grito Rock São Carlos, Semanas do Audiovisual, Festival Contato, Se Vira São Carlos), construindo parcerias com coletivos e redes de economia solidária.
+No teatro, meu trabalho sempre foi “fim a fim”: além de dirigir, roteirizar e atuar, eu também executava frentes de produção como figurino, cenário, trilha sonora e projeções audiovisuais — o que me treinou para tomar decisões estéticas e técnicas sob restrição real (tempo, orçamento e logística) e ainda entregar com consistência.
+Essa vivência é a minha diferenciação: eu não “faço só uma parte”. Eu sei (e já precisei saber) planejar, produzir, executar, revisar e publicar — mantendo identidade artística, clareza de comunicação e acabamento técnico. Isso se reflete diretamente nos meus jogos: todos os meus jogos eu fiz sozinho, em todas as partes (design, programação, UI/UX, arte, áudio e integração).
+O que eu tive que dominar para realizar meus projetos (na prática)
+Criação e direção: concepção, roteiro, direção artística, ritmo/experiência do usuário, consistência estética.
+Produção e entrega: planejamento, cronograma, coordenação, parcerias, divulgação e operação de eventos/projetos complexos.
+Audiovisual completo: captação (foto/vídeo), edição, pós-produção, publicação e distribuição.
+Software e produto: desenvolvimento “do zero ao deploy”, com foco em usabilidade e robustez (especialmente em projetos solo).
+Serviços que eu presto hoje
+Desenvolvimento de jogos
+Produção e edição de vídeo
+Fotografia para perfil e fotografia de eventos
+Se você busca alguém que entregue com autonomia, visão artística e mão técnica — alguém capaz de transformar ideia em produto final, com acabamento e personalidade — eu trabalho exatamente nesse ponto raro: onde arte, tecnologia e produção se encontram.
+
