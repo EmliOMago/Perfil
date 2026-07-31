@@ -1,0 +1,28 @@
+# Proprietário padrão de todo o repositório
+* @EmliOMago
+
+# GitHub Actions
+/.github/ @EmliOMago
+
+# Site
+/index.html @EmliOMago
+/404.html @EmliOMago
+/manifest.json @EmliOMago
+/site.webmanifest @EmliOMago
+/browserconfig.xml @EmliOMago
+/robots.txt @EmliOMago
+/sitemap.xml @EmliOMago
+
+# Estilos
+/css/ @EmliOMago
+
+# Scripts
+/js/ @EmliOMago
+
+# Internacionalização
+/i18n/ @EmliOMago
+
+# Recursos
+/img/ @EmliOMago
+/audio/ @EmliOMago
+/video/ @EmliOMago

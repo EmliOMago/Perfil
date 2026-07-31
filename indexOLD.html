@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emli O’Mago | Arte, Tecnologia & Produção</title>
+    <style>
+        /* RESET E CORES SOLARPUNK / IDENTIDADE VISUAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #1a241b; /* Verde oliva escuro e acolhedor */
+            color: #f4edd9; /* Bege suave para leitura confortável */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* PERFIL / HEADER DE MAGO */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #dca842;
+            padding-bottom: 40px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #dca842;
+            box-shadow: 0 0 25px rgba(220, 168, 66, 0.25);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        header h1 {
+            font-size: 3rem;
+            color: #dca842;
+            font-family: Georgia, serif;
+            margin-bottom: 5px;
+        }
+        header .subtitle {
+            font-size: 1.1rem;
+            color: #a7c092;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        header .bio {
+            color: #e3d9c1;
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        /* SERVIÇOS */
+        .services-box {
+            background-color: #233024;
+            border: 1px solid #2e3f2f;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .services-box h4 {
+            color: #dca842;
+            margin-bottom: 10px;
+            font-family: Georgia, serif;
+        }
+        .services-box p {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        /* DESTAQUE INTERATIVO: ENTRADA PARA O CENÁRIO 3D */
+        .universe-banner {
+            background: linear-gradient(135deg, #253326, #2e3f2f);
+            border: 2px solid #dca842;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .universe-banner h2 {
+            color: #dca842;
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+        }
+        .universe-banner p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .btn-3d {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #dca842;
+            color: #1a241b;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-3d:hover {
+            transform: scale(1.05);
+            background-color: #f3be5a;
+        }
+
+        /* SEÇÃO DO CARROSSEL DE MÍDIA */
+        .carousel-section {
+            margin-bottom: 50px;
+        }
+        .carousel-section h2 {
+            font-family: Georgia, serif;
+            color: #dca842;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-left: 4px solid #e07a5f;
+            padding-left: 15px;
+        }
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 2px solid #2e3f2f;
+            background-color: #233024;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+            width: 100%;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s;
+        }
+        .carousel-slide:hover img {
+            opacity: 0.85;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            padding: 20px;
+            color: #ffffff;
+        }
+        .carousel-caption h3 {
+            color: #dca842;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .carousel-caption p {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+        /* Botões do Carrossel */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(26, 36, 27, 0.8);
+            color: #dca842;
+            border: 1px solid #2e3f2f;
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            transition: background-color 0.2s;
+        }
+        .carousel-btn:hover {
+            background-color: #dca842;
+            color: #1a241b;
+        }
+        .btn-prev { left: 15px; }
+        .btn-next { right: 15px; }
+
+        /* SEÇÃO DO FEED DE NOTÍCIAS */
+        .feed-section h2 {
+            font-family: Georgia, serif;
+            color: #dca842;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            border-left: 4px solid #e07a5f;
+            padding-left: 15px;
+        }
+        .feed-item {
+            background-color: #233024;
+            border: 1px solid #2e3f2f;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        .feed-date {
+            font-size: 0.85rem;
+            color: #e07a5f;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .feed-item h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .feed-item p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #2e3f2f;
+            color: #a7c092;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #dca842;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- SEÇÃO DO PERFIL (EMLI O'MAGO) -->
+        <header>
+            <img class="profile-pic" src="https://github.com/emliomago.png" alt="Emli O'Mago">
+            <h1>Emli O’Mago</h1>
+            <div class="subtitle">Arte, Tecnologia &amp; Produção Multidisciplinar</div>
+            <p class="bio">
+                Desenvolvedor solo e produtor artístico multidisciplinar. Uno engenharia de software, direção de arte e produção cultural para entregar projetos completos, do conceito ao lançamento. Com mais de uma década sustentando projetos coletivos (como a fundação do CA Trema e festivais em São Carlos/UFSCar), transito de forma fluida pelo teatro "fim a fim", pela produção musical independente (Projeto Panteos) e pelo desenvolvimento de jogos autorais e relaxantes, onde assino da programação à sonoplastia.
+            </p>
+            <div class="services-box">
+                <h4>Serviços Atuais</h4>
+                <p>Blogs • Apps/Android • Software sob medida • Design Gráfico e Logotipos • Produção e Edição de Vídeo • Fotografia para perfil e eventos</p>
+            </div>
+        </header>
+
+        <!-- PORTAL INTERATIVO 3D -->
+        <section class="universe-banner">
+            <h2>Explore o Bairro Mágico (3D)</h2>
+            <p>Visite meu cenário interativo em estilo Point &amp; Click direto pelo navegador. Caminhe de forma lúdica pela comunidade, ouça minhas composições musicais e acesse portais para os meus jogos.</p>
+            <a href="#" class="btn-3d">Entrar no Cenário 3D</a>
+        </section>
+
+        <!-- SEÇÃO: PORTFÓLIO VISUAL (CARROSSEL) -->
+        <section class="carousel-section">
+            <h2>Registros &amp; Produções Audiovisuais</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn btn-prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-btn btn-next" onclick="moveSlide(1)">&#10095;</button>
+                
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- SLIDE 1 (Exemplo direcionando para o YouTube) -->
+                    <div class="carousel-slide" onclick="window.open('https://youtube.com', '_blank')">
+                        <img src="https://via.placeholder.com/850x400/2e3f2f/f4edd9?text=Registro+Audiovisual+-+Teatro" alt="Vídeo de Teatro">
+                        <div class="carousel-caption">
+                            <h3>Produções e Projeções Audiovisuais</h3>
+                            <p>▶ Clique para assistir aos registros de espetáculos e direções de cena no YouTube.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 (Exemplo direcionando para o Instagram) -->
+                    <div class="carousel-slide" onclick="window.open('https://instagram.com', '_blank')">
+                        <img src="https://via.placeholder.com/850x400/364b38/f4edd9?text=Fotografia+e+Artes+Visuais" alt="Fotos de Eventos">
+                        <div class="carousel-caption">
+                            <h3>Fotografia, Pintura e Cartazes</h3>
+                            <p>📸 Clique para ver ensaios de perfil, registros de eventos e artes visuais no Instagram.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 (Exemplo focado na Produção Musical) -->
+                    <div class="carousel-slide" onclick="window.open('https://youtube.com', '_blank')">
+                        <img src="https://via.placeholder.com/850x400/233024/f4edd9?text=Projeto+Panteos+-+Sessões+de+Improvisação" alt="Projeto Panteos">
+                        <div class="carousel-caption">
+                            <h3>Projeto Panteos (Desde 2014)</h3>
+                            <p>🎵 Clique para ouvir as sessões de improvisação musical aberta e colaborativa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MURAL DE NOVIDADES (FEED) -->
+        <section class="feed-section">
+            <h2>Mural de Novidades</h2>
+
+            <!-- PROJETO 1 -->
+            <article class="feed-item">
+                <span class="feed-date">PROJETO EM ANDAMENTO</span>
+                <h3>Reinício de "Gatos no Telhado"</h3>
+                <p>O desenvolvimento do projeto Gatos no Telhado foi oficialmente reiniciado! Retomando as mecânicas calmas e a atmosfera acolhedora características do nosso universo de fantasia Solarpunk.</p>
+            </article>
+
+            <!-- PROJETO 2 -->
+            <article class="feed-item">
+                <span class="feed-date">PRÉ-PRODUÇÃO</span>
+                <h3>Início dos Trabalhos em "Kilombolando"</h3>
+                <p>Iniciando a fase de pesquisa, roteiro e concepção artística de Kilombolando. O projeto mergulhará profundamente em narrativas de ancestralidade, comunidade e impacto lúdico.</p>
+            </article>
+
+            <!-- PROJETO 3 -->
+            <article class="feed-item">
+                <span class="feed-date">FASE FINAL</span>
+                <h3>Finalização de "Lexross"</h3>
+                <p>Entrando na reta final de polimento, ajustes de UI/UX e testes de integração de som para a conclusão de Lexross. Em breve estará disponível de forma segura e acessível para todos.</p>
+            </article>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <p>Emli O’Mago • Hub de Portfólio Centralizado • Jogos em <a href="https://emliomago.itch.io" target="_blank">emliomago.itch.io</a></p>
+        </footer>
+    </div>
+
+    <!-- LOGICA DO CARROSSEL -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const track = document.getElementById('carouselTrack');
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= slides.lengthNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.

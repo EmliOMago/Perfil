@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Discussões
+    url: https://github.com/EmliOMago/Perfil/discussions
+    about: Utilize as Discussões para perguntas, ideias e conversas que não sejam bugs ou solicitações de funcionalidades.
+
+  - name: Portal Emli O'Mago
+    url: https://emliomago.github.io/Perfil/
+    about: Acesse o portal oficial.

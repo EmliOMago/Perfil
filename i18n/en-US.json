@@ -1,0 +1,72 @@
+{
+    "site.title": "Emli O'Mago",
+    "site.subtitle": "Official Portal",
+
+    "navigation.home": "Home",
+    "navigation.profile": "Profile",
+    "navigation.games": "Games",
+    "navigation.music": "Music",
+    "navigation.videos": "Videos",
+    "navigation.gallery": "Gallery",
+    "navigation.news": "News",
+    "navigation.search": "Search",
+
+    "home.title": "Emli O'Mago Portal",
+    "home.subtitle": "Welcome to the Official Portal.",
+    "home.featured": "Featured",
+    "home.latest": "Latest Updates",
+    "home.games": "Games",
+    "home.music": "Music",
+    "home.videos": "Videos",
+    "home.gallery": "Gallery",
+
+    "profile.title": "Profile",
+    "profile.biography": "Biography",
+    "profile.links": "Links",
+    "profile.social": "Social Networks",
+
+    "games.title": "Games",
+    "games.play": "Play",
+    "games.details": "Details",
+
+    "game.download": "Download",
+    "game.website": "Website",
+    "game.images": "Images",
+    "game.videos": "Videos",
+    "game.music": "Music",
+
+    "music.title": "Music",
+    "music.play": "Play",
+    "music.pause": "Pause",
+    "music.next": "Next",
+    "music.previous": "Previous",
+
+    "videos.title": "Videos",
+
+    "gallery.title": "Gallery",
+
+    "news.title": "News",
+
+    "search.title": "Search",
+    "search.placeholder": "Search...",
+    "search.results": "Results",
+
+    "player.nowPlaying": "Now Playing",
+    "player.nothing": "No media selected",
+
+    "footer.copyright": "© Emli O'Mago",
+
+    "error.loading": "Error loading content.",
+    "error.notFound": "Page not found.",
+    "error.retry": "Try again",
+
+    "common.loading": "Loading...",
+    "common.close": "Close",
+    "common.cancel": "Cancel",
+    "common.confirm": "Confirm",
+    "common.back": "Back",
+    "common.next": "Next",
+    "common.previous": "Previous",
+    "common.more": "More",
+    "common.less": "Less"
+}

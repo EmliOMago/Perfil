@@ -1,0 +1,85 @@
+{
+    "schemaVersion": "1.0",
+    "portalVersion": "1.0.0",
+    "generatedAt": "",
+    "languageDefault": "pt-BR",
+    "languages": [
+        "pt-BR"
+    ],
+    "repositories": {
+        "perfil": ".",
+        "arquivos": ""
+    },
+    "pages": [
+        {
+            "id": "home",
+            "route": "",
+            "title": "Home",
+            "component": "home"
+        },
+        {
+            "id": "perfil",
+            "route": "perfil",
+            "title": "Perfil",
+            "component": "perfil"
+        },
+        {
+            "id": "jogos",
+            "route": "jogos",
+            "title": "Jogos",
+            "component": "jogos"
+        },
+        {
+            "id": "musicas",
+            "route": "musicas",
+            "title": "Músicas",
+            "component": "musicas"
+        },
+        {
+            "id": "videos",
+            "route": "videos",
+            "title": "Vídeos",
+            "component": "videos"
+        },
+        {
+            "id": "galeria",
+            "route": "galeria",
+            "title": "Galeria",
+            "component": "galeria"
+        },
+        {
+            "id": "noticias",
+            "route": "noticias",
+            "title": "Notícias",
+            "component": "noticias"
+        },
+        {
+            "id": "pesquisa",
+            "route": "pesquisa",
+            "title": "Pesquisa",
+            "component": "pesquisa"
+        }
+    ],
+    "assets": {
+        "styles": [
+            "css/base.css",
+            "css/layout.css",
+            "css/componentes.css",
+            "css/paginas.css"
+        ],
+        "scripts": [
+            "js/main.js",
+            "js/loader.js",
+            "js/i18n.js",
+            "js/componentes.js",
+            "js/navegacao.js",
+            "js/pesquisa.js",
+            "js/player.js",
+            "js/utils.js"
+        ]
+    },
+    "cache": {
+        "enabled": true,
+        "strategy": "manifest"
+    }
+}
