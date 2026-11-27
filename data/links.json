@@ -1,7 +1,7 @@
 {
   "id": "LINKS",
   "versaoSchema": "1.0.0",
-  "versaoDados": "1.0.0",
+  "versaoDados": "1.0.1",
   "tipo": "links",
   "conteudo": {
     "LNK001": {
@@ -11,10 +11,10 @@
       "ativo": true
     },
     "LNK002": {
+      "ativo": true,
       "id": "LNK002",
-      "titulo": "Jogar Tiger Forest Defense",
-      "url": "https://777minigames.com.br/play/tiger-forest-defense",
-      "ativo": true
+      "titulo": "Jogar Tiger Fly Attack",
+      "url": "https://777minigames.com.br/jogos/tiger-fly-attack"
     },
     "LNK003": {
       "id": "LNK003",
