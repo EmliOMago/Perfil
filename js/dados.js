@@ -3,7 +3,7 @@ const root = new URL('../', import.meta.url)
 
 function read(url) {
   if (!requests.has(url.href)) {
-    const task = fetch(url, { signal: AbortSignal.timeout(12000) }).then(async response => {
+    const task = fetch(url, { cache: 'no-cache', signal: AbortSignal.timeout(12000) }).then(async response => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`)
       const record = await response.json()
       if (!/^1\./.test(record.versaoSchema)) throw new Error('Versão de dados incompatível')

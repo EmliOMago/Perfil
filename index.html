@@ -9,8 +9,29 @@
   <meta property="og:description" content="Um bairro para explorar jogos, arte e produção cultural.">
   <title>Emli O’Mago · Bairro Mágico</title>
   <link rel="icon" href="./assets/sol.png">
-  <link rel="stylesheet" href="./css/portal.css">
-  <script type="module" src="./js/portal.js"></script>
+  <noscript><link rel="stylesheet" href="./css/portal.css"></noscript>
+  <script type="module">
+    const refresh = path => fetch(path, { cache: 'no-cache', signal: AbortSignal.timeout(3000) })
+      .then(response => response.ok ? response.arrayBuffer() : undefined)
+      .catch(() => {})
+
+    const stylesheet = './css/portal.css'
+    const styles = refresh(stylesheet).then(() => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = stylesheet
+      document.head.append(link)
+    })
+    const scripts = Promise.all([refresh('./js/portal.js'), refresh('./js/dados.js')])
+    await Promise.all([styles, scripts])
+    try {
+      await import('./js/portal.js')
+    } catch {
+      const view = document.querySelector('#view')
+      view.setAttribute('aria-busy', 'false')
+      view.innerHTML = '<p class="notice">O portal está temporariamente indisponível. <a href="">Tentar novamente</a>.</p>'
+    }
+  </script>
 </head>
 <body>
   <a class="skip" href="#conteudo" id="skip">Ir para o conteúdo</a>
