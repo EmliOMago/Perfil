@@ -1,0 +1,60 @@
+{
+  "id": "PERFIS",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "perfis",
+  "conteudo": {
+    "PER001": {
+      "id": "PER001",
+      "ativo": true,
+      "tipo": "perfil",
+      "slug": "emli-omago",
+      "titulo": "Emli O’Mago",
+      "resumo": "Desenvolvedor solo e produtor artístico multidisciplinar.",
+      "categorias": [
+        "perfil"
+      ],
+      "imagens": [
+        "media/emli.webp"
+      ],
+      "links": [
+        "LNK007",
+        "LNK003",
+        "LNK004",
+        "LNK005",
+        "LNK006"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre mim",
+          "texto": "Sou Emli O’Mago. Trabalho entre engenharia de software, direção de arte e produção cultural, acompanhando cada projeto da concepção à publicação."
+        },
+        {
+          "tipo": "texto",
+          "titulo": "Trajetória",
+          "texto": "Cofundei o Complexo de Artes Trema (CA Trema) em 2012. Minha trajetória em São Carlos e região reúne pesquisa, extensão na UFSCar, economia solidária, produção de festivais e ações culturais abertas à comunidade."
+        },
+        {
+          "tipo": "texto",
+          "titulo": "Áreas de atuação",
+          "texto": "Desenvolvimento de jogos e software, direção artística, roteiro, audiovisual, fotografia, edição de vídeo, teatro, música e oficinas."
+        },
+        {
+          "tipo": "galeria",
+          "titulo": "Registros",
+          "imagens": [
+            "media/trema.webp",
+            "media/teatro.webp",
+            "media/panteos.webp"
+          ]
+        }
+      ],
+      "relacionados": [
+        "COL001",
+        "CAT002",
+        "PRJ010"
+      ]
+    }
+  }
+}

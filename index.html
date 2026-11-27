@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#170d1d">
+  <meta name="description" content="Conheça Emli O’Mago, seus jogos autorais, trabalhos em arte e produção cultural e o Bairro Mágico.">
+  <meta property="og:title" content="Emli O’Mago · Bairro Mágico">
+  <meta property="og:description" content="Um bairro para explorar jogos, arte e produção cultural.">
+  <title>Emli O’Mago · Bairro Mágico</title>
+  <link rel="icon" href="./assets/sol.png">
+  <link rel="stylesheet" href="./css/portal.css">
+  <script type="module" src="./js/portal.js"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo" id="skip">Ir para o conteúdo</a>
+  <header class="top">
+    <a class="brand" href="#/"><img width="34" height="34" src="./assets/sol.png" alt=""> <span>EMLI O’MAGO</span></a>
+    <nav id="menu" aria-label="Menu"><a href="#/">Início</a><a href="https://777minigames.com.br/games">Jogos</a></nav>
+    <div class="tools">
+      <button class="icon" id="search-button" aria-label="Pesquisar">⌕</button>
+      <button class="icon" id="prefs-button" aria-label="Preferências">⚙</button>
+      <a class="button small gold" id="top-map" href="#/bairro">Cenário 3D</a>
+    </div>
+  </header>
+  <div class="workspace">
+    <aside id="left-panel" class="rail" aria-label="Navegação contextual" hidden></aside>
+    <main id="conteudo" tabindex="-1">
+      <div id="view" aria-busy="true"><p class="notice">Carregando…</p></div>
+      <noscript><p class="notice">Ative o JavaScript para explorar o Bairro Mágico. Você também pode acessar <a href="https://emliomago.itch.io/">o Itch.io</a> e <a href="https://777minigames.com.br/games">o catálogo 777 Minigames</a>.</p></noscript>
+    </main>
+    <aside id="right-panel" class="rail" aria-label="Conteúdos relacionados" hidden></aside>
+  </div>
+  <footer class="player">
+    <div class="player-name"><span class="music-icon" aria-hidden="true">♫</span><span><strong id="player-label">Estúdio Musical</strong><small id="track-label">Nenhuma faixa disponível</small></span></div>
+    <div class="player-transport">
+      <button class="icon" id="previous-track" aria-label="Faixa anterior" disabled>⏮</button>
+      <button class="icon play" id="play-track" aria-label="Reproduzir" disabled>▶</button>
+      <button class="icon" id="next-track" aria-label="Próxima faixa" disabled>⏭</button>
+      <input id="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Posição da faixa" disabled>
+    </div>
+    <div id="social" class="social"></div>
+    <audio id="audio" preload="none"></audio>
+  </footer>
+  <dialog id="preferences"></dialog>
+  <dialog id="lightbox"></dialog>
+</body>
+</html>

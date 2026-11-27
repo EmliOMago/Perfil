@@ -1,0 +1,62 @@
+{
+  "id": "LINKS",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "links",
+  "conteudo": {
+    "LNK001": {
+      "id": "LNK001",
+      "titulo": "777 Minigames",
+      "url": "https://777minigames.com.br/games",
+      "ativo": true
+    },
+    "LNK002": {
+      "id": "LNK002",
+      "titulo": "Jogar Tiger Forest Defense",
+      "url": "https://777minigames.com.br/play/tiger-forest-defense",
+      "ativo": true
+    },
+    "LNK003": {
+      "id": "LNK003",
+      "titulo": "Itch.io",
+      "url": "https://emliomago.itch.io/",
+      "ativo": true
+    },
+    "LNK004": {
+      "id": "LNK004",
+      "titulo": "GitHub",
+      "url": "https://github.com/EmliOMago",
+      "ativo": true
+    },
+    "LNK005": {
+      "id": "LNK005",
+      "titulo": "YouTube",
+      "url": "https://www.youtube.com/@EmliOMago",
+      "ativo": true
+    },
+    "LNK006": {
+      "id": "LNK006",
+      "titulo": "Instagram",
+      "url": "https://www.instagram.com/emliomago/",
+      "ativo": true
+    },
+    "LNK007": {
+      "id": "LNK007",
+      "titulo": "E-mail",
+      "url": "mailto:emliomago@gmail.com",
+      "ativo": true
+    },
+    "LNK008": {
+      "id": "LNK008",
+      "titulo": "Termo Tiger",
+      "url": "https://777minigames.com.br/jogos/termo",
+      "ativo": true
+    },
+    "LNK009": {
+      "id": "LNK009",
+      "titulo": "Snake Tiger",
+      "url": "https://777minigames.com.br/jogos/snake",
+      "ativo": true
+    }
+  }
+}

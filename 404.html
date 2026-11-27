@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Página indisponível · Emli O’Mago</title>
+<style>body{background:#170d1d;color:#f8edf5;font:1.1rem system-ui;padding:8vw}a{color:#ffcc66}</style>
+<h1>Página indisponível</h1><p><a id="home" href="./">Voltar ao Portal Emli O’Mago</a></p>
+<script>
+const projectFolder = location.hostname.endsWith('.github.io') && location.pathname.split('/')[1] === 'Perfil';
+document.querySelector('#home').href = projectFolder ? '/Perfil/#/' : '/#/';
+</script>
+</html>

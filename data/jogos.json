@@ -1,0 +1,206 @@
+{
+  "id": "JOGOS",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "jogos",
+  "conteudo": {
+    "JOG001": {
+      "id": "JOG001",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "ascensao-na-ruina",
+      "titulo": "Ascensão na Ruína",
+      "resumo": "Conduza um pequeno grupo de sobreviventes em um mundo pós-apocalíptico.",
+      "categorias": [
+        "jogo"
+      ],
+      "imagens": [
+        "media/ascensao.webp"
+      ],
+      "rotulo": "Gestão de colônia",
+      "tags": [
+        "estrategia"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre o projeto",
+          "texto": "Recupere conhecimento, organize a produção artesanal e prepare o assentamento para crises. Das escolhas da comunidade emergem relações, perdas e pequenas vitórias."
+        }
+      ],
+      "relacionados": [
+        "JOG002",
+        "COL001"
+      ]
+    },
+    "JOG002": {
+      "id": "JOG002",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "mocozado-interestelar",
+      "titulo": "Mocozado Interestelar",
+      "resumo": "Repare uma nave de colonização após uma colisão no espaço profundo.",
+      "categorias": [
+        "jogo"
+      ],
+      "imagens": [
+        "media/mocozado.webp"
+      ],
+      "rotulo": "Sobrevivência espacial",
+      "tags": [
+        "sobrevivencia"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre o projeto",
+          "texto": "Desperte antes dos demais tripulantes, restaure módulos vitais e administre recursos escassos para proteger os colonos em hibernação."
+        }
+      ],
+      "relacionados": [
+        "JOG003",
+        "COL001"
+      ]
+    },
+    "JOG003": {
+      "id": "JOG003",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "gatos-no-telhado",
+      "titulo": "Gatos no Telhado",
+      "resumo": "Escale sobrados brasileiros para resgatar gatinhos nos telhados.",
+      "categorias": [
+        "jogo"
+      ],
+      "imagens": [
+        "media/gatos.webp"
+      ],
+      "rotulo": "Plataforma 3D",
+      "tags": [
+        "plataforma"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre o projeto",
+          "texto": "Explore rotas verticais com movimentos inspirados em parkour e resolva pequenos quebra-cabeças em comunidades urbanas do Brasil."
+        }
+      ],
+      "relacionados": [
+        "JOG004",
+        "COL001"
+      ]
+    },
+    "JOG004": {
+      "id": "JOG004",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "sim-bio-z",
+      "titulo": "Sim Bio Z",
+      "resumo": "Cuide de uma vila ecológica futurista e acompanhe as reações do ambiente.",
+      "categorias": [
+        "jogo"
+      ],
+      "imagens": [
+        "media/sim-bio-z.webp"
+      ],
+      "rotulo": "Simulação sustentável",
+      "tags": [
+        "simulacao"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre o projeto",
+          "texto": "Combine manutenção, otimização de recursos e design urbano verde. Explore a vila com movimentos de plataforma e desafios de parkour."
+        }
+      ],
+      "relacionados": [
+        "JOG005",
+        "COL001"
+      ]
+    },
+    "JOG005": {
+      "id": "JOG005",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "desalgoritmizar",
+      "titulo": "Desalgoritmizar",
+      "resumo": "Analise candidaturas em uma central que tenta reduzir histórias humanas a métricas.",
+      "categorias": [
+        "jogo"
+      ],
+      "imagens": [
+        "media/desalgoritmizar.webp"
+      ],
+      "rotulo": "Narrativa interativa",
+      "tags": [
+        "narrativa"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre o projeto",
+          "texto": "Circule pela operação, registre os casos e atenda quem chega em busca de informação. Cada candidatura revela contextos que escapam ao algoritmo."
+        }
+      ],
+      "relacionados": [
+        "JOG006",
+        "COL001"
+      ]
+    },
+    "JOG006": {
+      "id": "JOG006",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "kilombo-saga",
+      "titulo": "Kilombo — Saga",
+      "resumo": "Conduza a formação, proteção e expansão de um quilombo.",
+      "categorias": [
+        "jogo"
+      ],
+      "imagens": [
+        "media/kilombo.webp"
+      ],
+      "rotulo": "Estratégia tática",
+      "tags": [
+        "estrategia"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Sobre o projeto",
+          "texto": "Organize recursos, acolha pessoas resgatadas e planeje missões de infiltração e resgate. A gestão da comunidade se combina com combate tático por turnos."
+        }
+      ],
+      "relacionados": [
+        "JOG001",
+        "COL001"
+      ]
+    },
+    "JOG007": {
+      "id": "JOG007",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "tiger-forest-defense",
+      "titulo": "Tiger Forest Defense",
+      "resumo": "Um dos jogos do 777 Minigames, com acesso à partida pelo site oficial.",
+      "categorias": [
+        "jogo"
+      ],
+      "rotulo": "777 Minigames",
+      "tags": [
+        "arcade"
+      ],
+      "links": [
+        "LNK002",
+        "LNK001",
+        "LNK008",
+        "LNK009"
+      ],
+      "relacionados": [
+        "CAT001"
+      ]
+    }
+  }
+}

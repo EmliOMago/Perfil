@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Envelope de dados do Portal",
+  "type": "object",
+  "required": ["id", "versaoSchema", "versaoDados", "tipo", "conteudo"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "versaoSchema": { "type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$" },
+    "versaoDados": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "tipo": { "type": "string", "minLength": 1 },
+    "conteudo": { "type": "object" }
+  }
+}

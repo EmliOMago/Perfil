@@ -1,0 +1,44 @@
+{
+  "id": "PORTAL",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "config",
+  "baseDados": "./data/",
+  "baseReserva": "./data/",
+  "idiomaPadrao": "pt-BR",
+  "idiomas": {
+    "pt-BR": "Português",
+    "en": "English"
+  },
+  "unityUrl": "",
+  "faixas": "musicas.json",
+  "catalogo": "LNK001",
+  "menu": [
+    {
+      "rotulo": "home",
+      "rota": "#/"
+    },
+    {
+      "rotulo": "projects",
+      "id": "COL001"
+    },
+    {
+      "rotulo": "culture",
+      "id": "CAT002"
+    },
+    {
+      "rotulo": "games",
+      "id": "LNK001"
+    },
+    {
+      "rotulo": "about",
+      "id": "PER001"
+    }
+  ],
+  "redes": [
+    "LNK003",
+    "LNK004",
+    "LNK005",
+    "LNK006"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "AGRUPAMENTOS",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "agrupamentos",
+  "conteudo": {
+    "CAT001": {
+      "id": "CAT001",
+      "ativo": true,
+      "tipo": "categoria",
+      "slug": "arcade",
+      "titulo": "Arcade",
+      "resumo": "Visite o catálogo público e encontre os jogos do 777 Minigames.",
+      "categorias": [
+        "jogo"
+      ],
+      "links": [
+        "LNK001"
+      ],
+      "itens": [
+        "JOG007"
+      ]
+    },
+    "CAT002": {
+      "id": "CAT002",
+      "ativo": true,
+      "tipo": "categoria",
+      "slug": "cultura",
+      "titulo": "Arte e cultura",
+      "resumo": "Trabalhos em teatro, produção cultural e música.",
+      "categorias": [
+        "cultura"
+      ],
+      "itens": [
+        "PRJ008",
+        "PRJ009",
+        "PRJ010"
+      ]
+    },
+    "COL001": {
+      "id": "COL001",
+      "ativo": true,
+      "tipo": "colecao",
+      "slug": "projetos-autorais",
+      "titulo": "Projetos autorais",
+      "resumo": "Jogos de diferentes gêneros apresentados no portfólio de Emli.",
+      "categorias": [
+        "jogo"
+      ],
+      "itens": [
+        "JOG001",
+        "JOG002",
+        "JOG003",
+        "JOG004",
+        "JOG005",
+        "JOG006"
+      ]
+    },
+    "SER001": {
+      "id": "SER001",
+      "ativo": true,
+      "tipo": "serie",
+      "slug": "trajetoria-criativa",
+      "titulo": "Trajetória criativa",
+      "resumo": "Percorra os trabalhos de Emli em teatro, produção e música.",
+      "categorias": [
+        "cultura"
+      ],
+      "itens": [
+        "PRJ008",
+        "PRJ009",
+        "PRJ010"
+      ]
+    },
+    "TAG001": {
+      "id": "TAG001",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "estrategia",
+      "titulo": "Estratégia",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "JOG001",
+        "JOG006"
+      ]
+    },
+    "TAG002": {
+      "id": "TAG002",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "teatro",
+      "titulo": "Teatro",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "PRJ008"
+      ]
+    },
+    "TAG003": {
+      "id": "TAG003",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "sobrevivencia",
+      "titulo": "Sobrevivência",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "JOG002"
+      ]
+    },
+    "TAG004": {
+      "id": "TAG004",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "plataforma",
+      "titulo": "Plataforma",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "JOG003"
+      ]
+    },
+    "TAG005": {
+      "id": "TAG005",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "simulacao",
+      "titulo": "Simulação",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "JOG004"
+      ]
+    },
+    "TAG006": {
+      "id": "TAG006",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "narrativa",
+      "titulo": "Narrativa",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "JOG005"
+      ]
+    },
+    "TAG007": {
+      "id": "TAG007",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "arcade",
+      "titulo": "Arcade",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "JOG007"
+      ]
+    },
+    "TAG008": {
+      "id": "TAG008",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "festivais",
+      "titulo": "Festivais",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "PRJ009"
+      ]
+    },
+    "TAG009": {
+      "id": "TAG009",
+      "ativo": true,
+      "tipo": "tag",
+      "slug": "improvisacao",
+      "titulo": "Improvisação",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "itens": [
+        "PRJ010"
+      ]
+    }
+  }
+}

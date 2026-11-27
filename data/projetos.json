@@ -1,0 +1,48 @@
+{
+  "id": "PROJETOS",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "projetos",
+  "conteudo": {
+    "PRJ101": {
+      "referencia": "JOG001",
+      "tipo": "jogo"
+    },
+    "PRJ102": {
+      "referencia": "JOG002",
+      "tipo": "jogo"
+    },
+    "PRJ103": {
+      "referencia": "JOG003",
+      "tipo": "jogo"
+    },
+    "PRJ104": {
+      "referencia": "JOG004",
+      "tipo": "jogo"
+    },
+    "PRJ105": {
+      "referencia": "JOG005",
+      "tipo": "jogo"
+    },
+    "PRJ106": {
+      "referencia": "JOG006",
+      "tipo": "jogo"
+    },
+    "PRJ107": {
+      "referencia": "JOG007",
+      "tipo": "jogo"
+    },
+    "PRJ108": {
+      "referencia": "PRJ008",
+      "tipo": "producao"
+    },
+    "PRJ109": {
+      "referencia": "PRJ009",
+      "tipo": "producao"
+    },
+    "PRJ110": {
+      "referencia": "PRJ010",
+      "tipo": "producao"
+    }
+  }
+}

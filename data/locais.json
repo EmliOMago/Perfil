@@ -1,0 +1,178 @@
+{
+  "id": "LOCAIS",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "locais",
+  "conteudo": {
+    "LOC001": {
+      "id": "LOC001",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "praca",
+      "titulo": "Praça Central",
+      "resumo": "O ponto de encontro do Bairro.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "praca",
+      "posicao": [
+        0,
+        0
+      ],
+      "destino": "COL001"
+    },
+    "LOC002": {
+      "id": "LOC002",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "casa",
+      "titulo": "Casa do Emli",
+      "resumo": "Conheça a trajetória de quem criou o Bairro.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "casa",
+      "posicao": [
+        -5,
+        -4
+      ],
+      "destino": "PER001"
+    },
+    "LOC003": {
+      "id": "LOC003",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "arcade",
+      "titulo": "Arcade",
+      "resumo": "Encontre jogos no catálogo 777 Minigames.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "arcade",
+      "posicao": [
+        5,
+        -4
+      ],
+      "destino": "LNK001"
+    },
+    "LOC004": {
+      "id": "LOC004",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "biblioteca",
+      "titulo": "Biblioteca",
+      "resumo": "Percorra a trajetória artística de Emli.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "biblioteca",
+      "posicao": [
+        0,
+        -6
+      ],
+      "destino": "SER001"
+    },
+    "LOC005": {
+      "id": "LOC005",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "teatro",
+      "titulo": "Teatro",
+      "resumo": "Conheça trabalhos de palco e de rua.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "teatro",
+      "posicao": [
+        -6,
+        1
+      ],
+      "destino": "PRJ008"
+    },
+    "LOC006": {
+      "id": "LOC006",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "estudio",
+      "titulo": "Estúdio Musical",
+      "resumo": "Visite o laboratório de improvisação Pantëos.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "estudio",
+      "posicao": [
+        6,
+        1
+      ],
+      "destino": "PRJ010"
+    },
+    "LOC007": {
+      "id": "LOC007",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "atelie",
+      "titulo": "Ateliê",
+      "resumo": "Explore performance, figurino e artes visuais.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "atelie",
+      "posicao": [
+        -5,
+        5
+      ],
+      "destino": "PRJ008"
+    },
+    "LOC008": {
+      "id": "LOC008",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "cafe",
+      "titulo": "Café",
+      "resumo": "Conheça os encontros e festivais produzidos em São Carlos.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "cafe",
+      "posicao": [
+        0,
+        6
+      ],
+      "destino": "PRJ009"
+    },
+    "LOC009": {
+      "id": "LOC009",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "jardim",
+      "titulo": "Jardim",
+      "resumo": "Conheça uma vila ecológica em Sim Bio Z.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "jardim",
+      "posicao": [
+        5,
+        5
+      ],
+      "destino": "JOG004"
+    },
+    "LOC010": {
+      "id": "LOC010",
+      "ativo": true,
+      "tipo": "local",
+      "slug": "oficina",
+      "titulo": "Oficina",
+      "resumo": "Descubra os projetos de jogos autorais.",
+      "categorias": [
+        "bairro"
+      ],
+      "modelo": "oficina",
+      "posicao": [
+        3,
+        -1.5
+      ],
+      "destino": "COL001"
+    }
+  }
+}

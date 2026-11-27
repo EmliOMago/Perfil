@@ -1,0 +1,9 @@
+{
+  "name": "portal-emli-omago",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 scripts/servir.py",
+    "validate": "python3 scripts/validar.py"
+  }
+}

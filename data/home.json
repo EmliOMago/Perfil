@@ -1,0 +1,48 @@
+{
+  "id": "HOME",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "home",
+  "conteudo": {
+    "titulo": "Emli O’Mago",
+    "destaque": "Um Bairro Mágico",
+    "subtitulo": "Jogos, arte e produção cultural se encontram em um bairro inspirado no interior de São Paulo.",
+    "secoes": [
+      {
+        "titulo": "Projetos em destaque",
+        "tipo": "cards",
+        "itens": [
+          "JOG001",
+          "JOG002",
+          "JOG003"
+        ],
+        "mais": "COL001"
+      },
+      {
+        "titulo": "No arcade",
+        "tipo": "arcade",
+        "itens": [
+          "JOG007"
+        ],
+        "mais": "LNK001"
+      },
+      {
+        "titulo": "Arte e cultura",
+        "tipo": "cards",
+        "itens": [
+          "PRJ008",
+          "PRJ009",
+          "PRJ010"
+        ],
+        "mais": "CAT002"
+      },
+      {
+        "titulo": "Conheça o autor",
+        "tipo": "perfil",
+        "itens": [
+          "PER001"
+        ]
+      }
+    ]
+  }
+}

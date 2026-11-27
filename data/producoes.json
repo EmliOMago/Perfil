@@ -1,0 +1,117 @@
+{
+  "id": "PRODUCOES",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "producoes",
+  "conteudo": {
+    "PRJ008": {
+      "id": "PRJ008",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "artes-cenicas-e-visuais",
+      "titulo": "Artes cênicas e visuais",
+      "resumo": "Teatro, performance e live-painting em praças e espaços culturais.",
+      "categorias": [
+        "cultura"
+      ],
+      "imagens": [
+        "media/teatro.webp"
+      ],
+      "tags": [
+        "teatro"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Palco e rua",
+          "texto": "Na cena, Emli atua como diretor, roteirista, ator, cenógrafo e figurinista. Também produz trilhas e projeções audiovisuais, monta exposições coletivas e realiza live-painting em festivais e saraus."
+        },
+        {
+          "tipo": "galeria",
+          "titulo": "Registros",
+          "imagens": [
+            "media/teatro.webp",
+            "media/figurinos.webp"
+          ]
+        }
+      ],
+      "relacionados": [
+        "PRJ009",
+        "PER001"
+      ]
+    },
+    "PRJ009": {
+      "id": "PRJ009",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "producao-cultural",
+      "titulo": "Produção cultural",
+      "resumo": "Festivais, colaboração e ocupação cultural em São Carlos.",
+      "categorias": [
+        "cultura"
+      ],
+      "imagens": [
+        "media/producao.webp"
+      ],
+      "tags": [
+        "festivais"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Festivais e comunidade",
+          "texto": "Grito Rock São Carlos, Semanas do Audiovisual, Festival Contato e Se Vira São Carlos fazem parte da trajetória de produção. Esses encontros articularam música, cinema, dança, literatura e artes visuais com coletivos de economia solidária."
+        },
+        {
+          "tipo": "galeria",
+          "titulo": "Registros",
+          "imagens": [
+            "media/producao.webp",
+            "media/trema.webp"
+          ]
+        }
+      ],
+      "relacionados": [
+        "PRJ010",
+        "PRJ008"
+      ]
+    },
+    "PRJ010": {
+      "id": "PRJ010",
+      "ativo": true,
+      "tipo": "projeto",
+      "slug": "panteos",
+      "titulo": "Pantëos",
+      "resumo": "Laboratório aberto de improvisação musical.",
+      "categorias": [
+        "cultura",
+        "musica"
+      ],
+      "imagens": [
+        "media/panteos.webp"
+      ],
+      "tags": [
+        "improvisacao"
+      ],
+      "links": [
+        "LNK005"
+      ],
+      "secoes": [
+        {
+          "tipo": "texto",
+          "titulo": "Música em encontro",
+          "texto": "Fundado em 2014, o Pantëos promove sessões abertas a músicos iniciantes e veteranos. Emli participa da facilitação, gravação, edição de áudio e distribuição audiovisual."
+        },
+        {
+          "tipo": "audio",
+          "titulo": "Faixas",
+          "itens": []
+        }
+      ],
+      "relacionados": [
+        "PRJ009",
+        "PER001"
+      ]
+    }
+  }
+}

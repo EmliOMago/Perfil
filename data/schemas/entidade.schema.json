@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entidade navegável do Portal",
+  "type": "object",
+  "required": ["id", "ativo", "tipo", "slug", "titulo", "resumo", "categorias"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[A-Z]{3}[0-9]{3,}$" },
+    "ativo": { "type": "boolean" },
+    "tipo": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "titulo": { "type": "string" },
+    "resumo": { "type": "string" },
+    "categorias": { "$ref": "#/$defs/list" },
+    "tags": { "$ref": "#/$defs/list" },
+    "imagens": { "$ref": "#/$defs/list" },
+    "itens": { "$ref": "#/$defs/list" },
+    "links": { "$ref": "#/$defs/list" },
+    "relacionados": { "$ref": "#/$defs/list" },
+    "traducoes": { "type": "object" },
+    "secoes": { "type": "array", "items": { "type": "object", "required": ["tipo", "titulo"] } }
+  },
+  "$defs": {
+    "list": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  }
+}

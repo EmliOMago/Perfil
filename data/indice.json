@@ -1,0 +1,419 @@
+{
+  "id": "INDICE",
+  "versaoSchema": "1.0.0",
+  "versaoDados": "1.0.0",
+  "tipo": "indice",
+  "conteudo": {
+    "JOG001": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "ascensao-na-ruina",
+      "titulo": "Ascensão na Ruína",
+      "resumo": "Conduza um pequeno grupo de sobreviventes em um mundo pós-apocalíptico.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "estrategia"
+      ],
+      "layout": "detalhe"
+    },
+    "JOG002": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "mocozado-interestelar",
+      "titulo": "Mocozado Interestelar",
+      "resumo": "Repare uma nave de colonização após uma colisão no espaço profundo.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "sobrevivencia"
+      ],
+      "layout": "detalhe"
+    },
+    "JOG003": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "gatos-no-telhado",
+      "titulo": "Gatos no Telhado",
+      "resumo": "Escale sobrados brasileiros para resgatar gatinhos nos telhados.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "plataforma"
+      ],
+      "layout": "detalhe"
+    },
+    "JOG004": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "sim-bio-z",
+      "titulo": "Sim Bio Z",
+      "resumo": "Cuide de uma vila ecológica futurista e acompanhe as reações do ambiente.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "simulacao"
+      ],
+      "layout": "detalhe"
+    },
+    "JOG005": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "desalgoritmizar",
+      "titulo": "Desalgoritmizar",
+      "resumo": "Analise candidaturas em uma central que tenta reduzir histórias humanas a métricas.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "narrativa"
+      ],
+      "layout": "detalhe"
+    },
+    "JOG006": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "kilombo-saga",
+      "titulo": "Kilombo — Saga",
+      "resumo": "Conduza a formação, proteção e expansão de um quilombo.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "estrategia"
+      ],
+      "layout": "detalhe"
+    },
+    "JOG007": {
+      "arquivo": "jogos.json",
+      "tipo": "projeto",
+      "slug": "tiger-forest-defense",
+      "titulo": "Tiger Forest Defense",
+      "resumo": "Um dos jogos do 777 Minigames, com acesso à partida pelo site oficial.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [
+        "arcade"
+      ],
+      "layout": "detalhe"
+    },
+    "PRJ008": {
+      "arquivo": "producoes.json",
+      "tipo": "projeto",
+      "slug": "artes-cenicas-e-visuais",
+      "titulo": "Artes cênicas e visuais",
+      "resumo": "Teatro, performance e live-painting em praças e espaços culturais.",
+      "categorias": [
+        "cultura"
+      ],
+      "tags": [
+        "teatro"
+      ],
+      "layout": "detalhe"
+    },
+    "PRJ009": {
+      "arquivo": "producoes.json",
+      "tipo": "projeto",
+      "slug": "producao-cultural",
+      "titulo": "Produção cultural",
+      "resumo": "Festivais, colaboração e ocupação cultural em São Carlos.",
+      "categorias": [
+        "cultura"
+      ],
+      "tags": [
+        "festivais"
+      ],
+      "layout": "detalhe"
+    },
+    "PRJ010": {
+      "arquivo": "producoes.json",
+      "tipo": "projeto",
+      "slug": "panteos",
+      "titulo": "Pantëos",
+      "resumo": "Laboratório aberto de improvisação musical.",
+      "categorias": [
+        "cultura",
+        "musica"
+      ],
+      "tags": [
+        "improvisacao"
+      ],
+      "layout": "detalhe"
+    },
+    "PER001": {
+      "arquivo": "perfis.json",
+      "tipo": "perfil",
+      "slug": "emli-omago",
+      "titulo": "Emli O’Mago",
+      "resumo": "Desenvolvedor solo e produtor artístico multidisciplinar.",
+      "categorias": [
+        "perfil"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "CAT001": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "categoria",
+      "slug": "arcade",
+      "titulo": "Arcade",
+      "resumo": "Visite o catálogo público e encontre os jogos do 777 Minigames.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "CAT002": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "categoria",
+      "slug": "cultura",
+      "titulo": "Arte e cultura",
+      "resumo": "Trabalhos em teatro, produção cultural e música.",
+      "categorias": [
+        "cultura"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "COL001": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "colecao",
+      "slug": "projetos-autorais",
+      "titulo": "Projetos autorais",
+      "resumo": "Jogos de diferentes gêneros apresentados no portfólio de Emli.",
+      "categorias": [
+        "jogo"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "SER001": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "serie",
+      "slug": "trajetoria-criativa",
+      "titulo": "Trajetória criativa",
+      "resumo": "Percorra os trabalhos de Emli em teatro, produção e música.",
+      "categorias": [
+        "cultura"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG001": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "estrategia",
+      "titulo": "Estratégia",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG002": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "teatro",
+      "titulo": "Teatro",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG003": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "sobrevivencia",
+      "titulo": "Sobrevivência",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG004": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "plataforma",
+      "titulo": "Plataforma",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG005": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "simulacao",
+      "titulo": "Simulação",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG006": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "narrativa",
+      "titulo": "Narrativa",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG007": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "arcade",
+      "titulo": "Arcade",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG008": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "festivais",
+      "titulo": "Festivais",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "TAG009": {
+      "arquivo": "agrupamentos.json",
+      "tipo": "tag",
+      "slug": "improvisacao",
+      "titulo": "Improvisação",
+      "resumo": "Explore os conteúdos relacionados a este tema.",
+      "categorias": [],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC001": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "praca",
+      "titulo": "Praça Central",
+      "resumo": "O ponto de encontro do Bairro.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC002": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "casa",
+      "titulo": "Casa do Emli",
+      "resumo": "Conheça a trajetória de quem criou o Bairro.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC003": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "arcade",
+      "titulo": "Arcade",
+      "resumo": "Encontre jogos no catálogo 777 Minigames.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC004": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "biblioteca",
+      "titulo": "Biblioteca",
+      "resumo": "Percorra a trajetória artística de Emli.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC005": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "teatro",
+      "titulo": "Teatro",
+      "resumo": "Conheça trabalhos de palco e de rua.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC006": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "estudio",
+      "titulo": "Estúdio Musical",
+      "resumo": "Visite o laboratório de improvisação Pantëos.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC007": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "atelie",
+      "titulo": "Ateliê",
+      "resumo": "Explore performance, figurino e artes visuais.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC008": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "cafe",
+      "titulo": "Café",
+      "resumo": "Conheça os encontros e festivais produzidos em São Carlos.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC009": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "jardim",
+      "titulo": "Jardim",
+      "resumo": "Conheça uma vila ecológica em Sim Bio Z.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    },
+    "LOC010": {
+      "arquivo": "locais.json",
+      "tipo": "local",
+      "slug": "oficina",
+      "titulo": "Oficina",
+      "resumo": "Descubra os projetos de jogos autorais.",
+      "categorias": [
+        "bairro"
+      ],
+      "tags": [],
+      "layout": "detalhe"
+    }
+  }
+}
