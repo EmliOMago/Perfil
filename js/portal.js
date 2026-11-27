@@ -32,12 +32,18 @@ let preserveScroll = 0
 const t = key => ui?.[key] ?? defaultUi?.[key] ?? key
 const local = (entry, key) => entry?.traducoes?.[language]?.[key] ?? entry?.[key]
 const route = (id, entry = db.index[id]) => entry ? `#/${entry.tipo}/${id}/${entry.slug}` : '#/'
-const target = id => Object.hasOwn(db.links, id)
-  ? safeUrl(db.links[id].url, ['https:', 'http:', 'mailto:']) : route(id)
+const gamesRoute = '#/jogos'
+const officialOrigins = new Set(['https://777minigames.com.br', 'https://www.777minigames.com.br'])
+const linkUrl = id => Object.hasOwn(db.links, id)
+  ? safeUrl(db.links[id].url, ['https:', 'http:', 'mailto:']) : ''
+const is777 = href => /^https:\/\//.test(href) && officialOrigins.has(new URL(href).origin)
+const target = id => id && id === settings.catalogo ? gamesRoute : linkUrl(id) || route(id)
 const name = id => local(db.index[id] ?? db.links[id], 'titulo')
 const anchor = (label, href, style = '') => href
   ? `<a class="${style}" href="${html(href)}">${html(label)}</a>` : ''
 const button = (label, href, style = '') => anchor(label, href, `button ${style}`)
+const externalButton = (label, href, style = '') => href
+  ? `<a class="button ${style}" href="${html(href)}" target="_blank" rel="noopener noreferrer">${html(label)}</a>` : ''
 const known = ids => (ids ?? []).filter(id => Object.hasOwn(db.index, id))
 const image = (path, alt, css = '', eager = false) => {
   const url = path ? safeUrl(db.media(path)) : new URL('../assets/ceu.webp', import.meta.url).href
@@ -71,7 +77,8 @@ async function homeSection(section) {
   if (section.tipo === 'arcade' || section.tipo === 'perfil') {
     const profile = section.tipo === 'perfil'
     const item = await db.item(section.itens[0]).catch(() => null)
-    if (!item) return `<section class="section">${sectionHead(section.titulo)}<p>${html(t('empty'))}</p></section>`
+    if (!item) return `<section class="section">${sectionHead(section.titulo)}<p>${html(t('empty'))}</p>
+      ${profile ? '' : `<div class="actions">${button(t('catalog'),gamesRoute,'gold')}</div>`}</section>`
     return `<section class="section">${sectionHead(local(section, 'titulo'))}
       <div class="${profile ? 'profile-strip' : 'arcade'}">
         ${profile ? image(item.imagens?.[0], '') : ''}
@@ -79,7 +86,8 @@ async function homeSection(section) {
           <h3>${html(local(item, 'titulo'))}</h3><p>${html(local(item, 'resumo'))}</p>
         </div>
         <div class="actions">${button(profile ? t('about') : t('viewGame'), route(item.id))}
-          ${section.mais ? button(t('catalog'), target(section.mais), 'gold') : ''}
+          ${profile ? '' : button(t('catalog'), gamesRoute, 'gold')}
+          ${section.mais && (profile || section.mais !== settings.catalogo) ? button(name(section.mais),target(section.mais)) : ''}
         </div>
       </div></section>`
   }
@@ -139,7 +147,7 @@ function detailSection(section) {
 
 function links(ids) {
   return `<div class="actions">${(ids ?? []).filter(id => Object.hasOwn(db.links, id) && db.links[id].ativo).map((id, index) =>
-    button(name(id), target(id), index === 0 ? 'gold' : '')).join('')}</div>`
+    (is777(target(id)) ? externalButton : button)(name(id), target(id), index === 0 ? 'gold' : '')).join('')}</div>`
 }
 function trail(parent, title) {
   return `<nav class="breadcrumb" aria-label="${html(t('directions'))}">${anchor(t('home'), '#/')} / ${anchor(parent.label, parent.href)} / <span aria-current="page">${html(title)}</span></nav>`
@@ -226,9 +234,44 @@ function panels(item) {
   fill(right, t('related'), related)
 }
 
+const catalogCopy = {
+  pt: {
+    title:'Catálogo de jogos', description:'Explore os jogos do 777 Minigames aqui. Para entrar na sua conta, abra o 777 em outra aba.',
+    back:'Voltar ao Perfil', signIn:'Entrar no 777', newTab:'nova aba',
+    reset:'Reabrir catálogo', fallback:'Se o catálogo não aparecer, abra no 777',
+    frame:'Catálogo público de jogos do 777 Minigames'
+  },
+  en: {
+    title:'Game catalogue', description:'Browse the 777 Minigames catalogue here. To sign in, open 777 in a new tab.',
+    back:'Back to the portal', signIn:'Sign in to 777', newTab:'new tab',
+    reset:'Reopen catalogue', fallback:'If the catalogue is unavailable, open it on 777',
+    frame:'777 Minigames public game catalogue'
+  }
+}
+function catalogPage() {
+  const copy = language?.startsWith('en') ? catalogCopy.en : catalogCopy.pt
+  const configuredUrl = safeUrl(linkUrl(settings.catalogo), ['https:'])
+  const catalogUrl = configuredUrl || 'https://777minigames.com.br/games'
+  const loginUrl = 'https://777minigames.com.br/auth'
+  const previous = history.state?.catalogBack
+  const back = typeof previous === 'string' && previous.startsWith('#/') ? previous : '#/'
+  return `<div class="shell catalog-page">
+    ${heading(copy.title,copy.description)}
+    <div class="actions catalog-toolbar">
+      ${button(copy.back,back)}
+      ${externalButton(`${copy.signIn} · ${copy.newTab}`,loginUrl,'gold')}
+      ${is777(catalogUrl) ? `<button class="button" type="button" data-reset-catalog>${html(copy.reset)}</button>` : ''}
+    </div>
+    ${is777(catalogUrl) ? `<iframe class="catalog-frame" src="${html(catalogUrl)}" title="${html(copy.frame)}"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>` : ''}
+    <div class="actions">${externalButton(`${copy.fallback} · ${copy.newTab}`,catalogUrl,'subtle')}</div>
+  </div>`
+}
+
 function chrome(routeName) {
   $('#menu').innerHTML = settings.menu.map(entry => {
-    const href = entry.rota ?? target(entry.id)
+    const href = entry.rotulo === 'games' ? gamesRoute : entry.rota ?? target(entry.id)
     const current = href.startsWith('#') && href === routeName
     return `<a href="${html(href)}"${current ? ' aria-current="page"' : ''}>${html(t(entry.rotulo))}</a>`
   }).join('')
@@ -267,6 +310,7 @@ async function render({ focus = false } = {}) {
   content.setAttribute('aria-busy', 'true')
   try {
     if (!type) markup = await home()
+    else if (key === gamesRoute) markup = catalogPage()
     else if (type === 'pesquisa') {
       results = search(new URLSearchParams(query))
       markup = results.markup
@@ -386,6 +430,10 @@ content.addEventListener('click', event => {
     const index = tracks.findIndex(track => track.id === player.dataset.track)
     if (index >= 0) chooseTrack(index)
   }
+  if (event.target.closest('[data-reset-catalog]')) {
+    const frame = content.querySelector('.catalog-frame')
+    if (frame) frame.replaceWith(frame.cloneNode())
+  }
   if (event.target.closest('[data-retry]')) render()
 })
 content.addEventListener('error', event => {
@@ -403,7 +451,8 @@ document.addEventListener('click', event => {
   event.preventDefault()
   const next = link.dataset.context ? JSON.parse(link.dataset.context)
     : /^#\/projeto\//.test(link.hash) && /^#\/projeto\//.test(currentRoute) ? history.state?.context : null
-  history.pushState({ context: next }, '', link.hash)
+  const catalogBack = link.hash === gamesRoute && currentRoute.startsWith('#/') ? currentRoute : undefined
+  history.pushState({ context: next, catalogBack }, '', link.hash)
   if (db) render({ focus: true })
 })
 window.addEventListener('hashchange', () => { if (db && currentRoute !== routeKey()) render({ focus: true }) })

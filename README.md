@@ -1,6 +1,6 @@
 # Portal Emli O’Mago
 
-O portal é estático. O menu **Jogos** e o Arcade no Bairro abrem o catálogo público do 777 Minigames. A ficha de Tiger Forest Defense oferece acesso à partida direta, ao catálogo e a dois outros jogos do 777.
+O portal é estático. O menu **Jogos**, o Arcade e as fichas que referenciam o catálogo levam à rota interna `#/jogos`. A página incorpora o catálogo público do 777, mantém o cabeçalho e o player do Portal e oferece retorno ao conteúdo anterior. **Entrar no 777** e os links oficiais de partida nas fichas abrem uma nova aba. O catálogo externo também pode ser aberto em outra aba se a incorporação estiver indisponível.
 
 ## Publicação no GitHub Pages
 
@@ -21,6 +21,6 @@ Os arquivos em `data/` são a cópia inicial do catálogo. Para usar **ArquivosN
 
 Os dicionários de interface estão em `data/idiomas/`. O conteúdo começa em português. Para traduzir um registro, adicione `traducoes.en` e os campos traduzidos no registro e no índice quando usados pela busca.
 
-A maquete 3D em HTML5 funciona no navegador e usa os destinos de `data/locais.json`. O Documento 015 define a integração do Bairro com o contêiner de experiências do Portal. O guia percorre esses locais sem IA. A opção experimental conversa em português com o modelo local do planejamento, via WebGPU e download voluntário. A inferência depende do navegador e do hardware. A conversa fica em memória durante a visita. A disponibilidade do modelo externo e a inferência em hardware compatível requerem validação própria.
+Use `unityUrl` em `config.json` para adicionar o acesso a um build Unity WebGL. A maquete 3D atual funciona no navegador e usa os destinos de `data/locais.json`. O guia percorre esses locais sem IA. A opção experimental conversa em português com o modelo local do planejamento, via WebGPU e download voluntário. A inferência depende do navegador e do hardware. A conversa fica em memória durante a visita. A disponibilidade do modelo externo e a inferência em hardware compatível requerem validação própria.
 
 Para habilitar o player, inclua as faixas autorizadas em `data/media/` e cadastre registros com `id`, `ativo`, `titulo` e `arquivo` no `conteudo` de `data/musicas.json`. As imagens usadas na interface e no catálogo foram extraídas do portfólio fornecido. O e-mail profissional vem do documento de identidade do autor.

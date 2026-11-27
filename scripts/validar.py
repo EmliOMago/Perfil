@@ -68,8 +68,8 @@ for section in records["home.json"]["secoes"]:
     assert section.get("mais") in (index.keys() | links.keys() | {None}), section
 for item in settings["menu"]:
     assert "rota" in item or item["id"] in index.keys() | links.keys(), item
-assert links[settings["catalogo"]]["url"] == "https://777minigames.com.br/games"
-assert links["LNK002"]["url"] == "https://777minigames.com.br/play/tiger-forest-defense"
+catalog = urlparse(links[settings["catalogo"]]["url"])
+assert catalog.scheme == "https" and catalog.netloc in {"777minigames.com.br", "www.777minigames.com.br"}, "Configure um catálogo oficial do 777 Minigames"
 languages = [records[f"idiomas/{lang}.json"] for lang in settings["idiomas"]]
 assert all(language.keys() == languages[0].keys() for language in languages), "Idiomas divergentes"
 print(f"{len(index)} conteúdos navegáveis, {len(links)} links e {len(records)} arquivos de dados validados.")

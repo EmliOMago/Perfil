@@ -29,3 +29,9 @@ dialog{border:1px solid #79446e;background:var(--surface);color:var(--paper);bor
 @media(max-width:760px){.hero::before{width:77%;height:58%;background-size:100% auto}}
 .detail-section video{display:block;width:100%;max-width:750px;border-radius:5px}
 .detail-section p+p{margin-top:.7rem}
+
+.catalog-page .page-head{margin-block:0 1.1rem}
+.catalog-page .page-head h1{font-size:clamp(2rem,4vw,3.2rem)}
+.catalog-toolbar{margin-block:0 1rem}
+.catalog-frame{display:block;width:100%;height:clamp(28rem,72dvh,68rem);border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+@media(max-width:520px){.catalog-frame{height:clamp(24rem,70dvh,42rem)}}
