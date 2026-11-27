@@ -2,7 +2,7 @@
 
 # Portal Emli O'Mago
 
-Versão: 1.0  
+Versão: 1.1  
 Status: Vigente
 
 ---
@@ -21,7 +21,7 @@ Ele é a porta de entrada para um universo criativo.
 
 A experiência principal do Portal acontece dentro do Bairro Mágico.
 
-A versão HTML existe para:
+A interface de leitura do Portal existe para:
 
 - apresentar o universo;
 - ser facilmente encontrada por mecanismos de busca;
@@ -29,7 +29,7 @@ A versão HTML existe para:
 - oferecer acesso rápido às informações;
 - conduzir o visitante ao Bairro Mágico.
 
-A versão 2D nunca deve competir com a experiência 3D.
+A interface de leitura complementa a experiência 3D. Ambas fazem parte do mesmo Portal HTML5.
 
 ---
 
@@ -142,7 +142,7 @@ A experiência 3D é a forma principal de exploração.
 
 ## 4.
 
-A versão HTML existe para complementar, nunca substituir, o Bairro Mágico.
+As páginas de leitura complementam a exploração do Bairro Mágico, que também funciona em HTML5.
 
 ## 5.
 

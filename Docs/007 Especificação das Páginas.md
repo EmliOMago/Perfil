@@ -79,6 +79,7 @@ As páginas oficiais do Portal são:
 | --------------------- | --------------------------------------------- |
 | Home                  | Exploração inicial do Portal                  |
 | Perfil                | Apresentação completa do autor                |
+| Bairro Mágico         | Exploração em cenário 3D HTML5 e lista de locais |
 | Projeto               | Apresentação de um projeto específico         |
 | Categoria             | Agrupamento de conteúdos                      |
 | Coleção               | Agrupamento editorial                         |
@@ -394,6 +395,10 @@ Sempre que possível:
 - os relacionamentos devem ser definidos pelos dados.
 
 ---
+
+## Bairro Mágico e Arcade
+
+A rota do Bairro abre a experiência HTML5 dentro do Portal e oferece uma lista acessível de locais e destinos. A navegação global continua disponível. O menu **Jogos** e o **Arcade** apontam para o catálogo oficial do 777 Minigames. Fichas de projetos podem oferecer um link de partida oficial.
 
 # 20. Responsabilidades deste Documento
 

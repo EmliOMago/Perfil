@@ -22,7 +22,7 @@ Toda funcionalidade do Portal deve respeitar os princípios arquiteturais do pro
 Em especial:
 
 - arquitetura orientada a dados;
-- HTML e Unity compartilham a mesma base de dados;
+- páginas e experiências HTML5 compartilham a mesma base de dados;
 - componentes reutilizáveis;
 - layouts definidos pelos dados;
 - baixo acoplamento;
@@ -300,10 +300,10 @@ A implementação deve permanecer compatível com:
 
 - GitHub Pages;
 - navegadores modernos;
-- versão HTML do Portal;
-- versão Unity do Portal.
+- dispositivos móveis e desktop;
+- interação por teclado, ponteiro e toque, com lista acessível de locais.
 
-A base de dados compartilhada deve produzir comportamento funcional equivalente entre as diferentes implementações.
+A base compartilhada mantém os mesmos IDs e destinos nas páginas e no cenário do Bairro. O contêiner libera recursos da experiência ao sair da sua rota. Nos estados de erro, o visitante pode usar os destinos em HTML e continuar no Portal.
 
 ---
 

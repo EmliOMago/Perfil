@@ -207,12 +207,7 @@ O desempenho deve ser considerado requisito arquitetural, e não apenas uma otim
 
 # 16. Compatibilidade
 
-As estratégias definidas neste documento devem produzir comportamento equivalente nas implementações:
-
-- HTML;
-- Unity.
-
-Diferenças internas de implementação são permitidas desde que o comportamento observado pelo usuário permaneça equivalente.
+As páginas e experiências HTML5 seguem a mesma política de dados, cache e recuperação de falhas. O host carrega o módulo e a mídia apenas quando necessários, interrompe o trabalho da experiência ao sair e mantém a navegação e o player do Portal disponíveis. Se o renderizador falhar, os destinos permanecem acessíveis pela lista em HTML.
 
 ---
 

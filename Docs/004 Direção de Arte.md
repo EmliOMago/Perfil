@@ -2,7 +2,7 @@
 
 ## Portal Emli O'Mago
 
-Versão: 1.1  
+Versão: 1.2  
 Status: Em construção
 
 ---
@@ -11,7 +11,7 @@ Status: Em construção
 
 Este documento define a direção artística do Portal Emli O'Mago.
 
-Seu propósito é garantir unidade visual entre o Portal HTML, o Bairro Mágico (Unity) e qualquer projeto derivado.
+Seu propósito é garantir unidade visual entre as páginas do Portal e o Bairro Mágico em HTML5 e qualquer projeto derivado.
 
 Toda decisão estética deve respeitar este documento.
 
@@ -173,7 +173,7 @@ Essas cores deverão atender simultaneamente aos seguintes critérios:
 
 - oferecer bom contraste para leitura;
 
-- funcionar tanto na versão HTML quanto na versão Unity.
+- funcionar nas páginas de leitura e no cenário do Bairro Mágico.
 
 ### 1. Terracota Quente (Base Terrosa & Pele)
 
@@ -189,7 +189,7 @@ Essas cores deverão atender simultaneamente aos seguintes critérios:
 
 - **Função:** Destaque / Detalhes de Interface (UI)
 
-- **Justificativa:** Representa a energia solar e a tecnologia limpa. Em contraste com roupas pretas, ele vibra intensamente. É uma cor excelente para botões ou elementos de leitura que precisam saltar aos olhos tanto na web (HTML) quanto em shaders de interface na Unity.
+- **Justificativa:** Representa a energia solar e a tecnologia limpa. Em contraste com roupas pretas, ele vibra intensamente. É uma cor excelente para botões ou elementos de leitura que precisam saltar aos olhos tanto nos componentes HTML quanto nos elementos desenhados no cenário.
 
 ### 3. Verde Musgo Fechado (Harmonia Botânica & Contraste)
 
@@ -205,7 +205,7 @@ Essas cores deverão atender simultaneamente aos seguintes critérios:
 
 - **Função:** Fundo Claro / Texto Principal
 
-- **Justificativa:** Substitui o branco puro por um tom off-white inspirado em materiais naturais e texturas arquitetônicas sustentáveis. Garante um contraste de leitura impecável com o Verde Musgo e o Preto, sem cansar a vista, mantendo a renderização limpa na Unity.
+- **Justificativa:** Substitui o branco puro por um tom off-white inspirado em materiais naturais e texturas arquitetônicas sustentáveis. Garante um contraste de leitura impecável com o Verde Musgo e o Preto, sem cansar a vista, mantendo a leitura clara sobre as superfícies do cenário.
 
 ### 5. Latão Tecnológico (O Link de Transição)
 
@@ -215,7 +215,7 @@ Essas cores deverão atender simultaneamente aos seguintes critérios:
 
 - **Justificativa:** Um meio-tom que remete a metais reciclados e estruturas solarpunk. Ele faz o casamento perfeito entre o preto das roupas, o verde da vegetação e os tons de pele morena, servindo para bordas, divisores e elementos secundários de UI.
 
-### Resumo da Paleta para Dev (HTML / Unity)
+### Resumo da Paleta para desenvolvimento web
 
 | **Cor**         | **Hex**   | **Perfil de Uso**                                    | Uso Principal                                         | Uso Secundário                             |
 | --------------- | --------- | ---------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------ |
@@ -229,7 +229,7 @@ Essas cores deverão atender simultaneamente aos seguintes critérios:
 
 > **Regra 2:** novas cores poderão ser adicionadas apenas como cores auxiliares e próximas as cores principais. As cinco cores oficiais permanecem como a base de toda a identidade visual.
 
-**Dica para a Unity:** Como essas cores foram pensadas com base em pigmentos naturais e luz solar, elas respondem muito bem ao pipeline de renderização linear (*Linear Color Space*) da Unity, mantendo a saturação correta sem estourar o canal alfa ou os mapas de emissões.
+**Aplicação na cena:** Use a paleta oficial como referência para os materiais e estados dos componentes. Se um renderizador usar espaço de cor linear, converta os valores na entrada e confira o contraste final na tela.
 
 ---
 
@@ -377,7 +377,7 @@ Princípios:
 
 - excelente legibilidade;
 
-- reutilização entre HTML e Unity.
+- reutilização entre páginas e experiências HTML5.
 
 Não serão utilizadas bibliotecas de terceiros como Font Awesome, Material Icons ou similares.
 
@@ -569,7 +569,7 @@ A identidade visual deve permanecer consistente em qualquer plataforma.
 
 # Questões Pendentes
 
-- materiais da Unity;
+- materiais e iluminação do renderizador web;
 
 - iluminação definitiva;
 

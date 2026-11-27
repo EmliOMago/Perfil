@@ -2,7 +2,7 @@
 
 ## Bairro Mágico
 
-Versão: 1.1  
+Versão: 1.2  
 Status: Em construção
 
 ---
@@ -290,6 +290,8 @@ Também poderá utilizar incorporações (*embeds*) de plataformas externas quan
 ---
 
 # Navegação
+
+O Bairro é uma experiência HTML5 carregada dentro do Portal. Seus locais usam IDs e destinos da base comum. O Arcade direciona ao catálogo oficial do 777 Minigames, e as obras em destaque podem levar às páginas oficiais de cada jogo. A lista de locais oferece acesso aos mesmos destinos que o cenário.
 
 A principal forma de navegação é caminhar.
 

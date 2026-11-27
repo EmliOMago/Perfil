@@ -2,7 +2,7 @@
 
 ## Portal Emli O'Mago
 
-Versão: 1.2  
+Versão: 1.3  
 Status: Em construção
 
 ---
@@ -21,19 +21,13 @@ Detalhes sobre a estrutura dos dados são documentados separadamente.
 
 # Estrutura Geral
 
-O Portal é composto por três partes independentes.
+O Portal é uma aplicação estática em HTML5, CSS e JavaScript publicada no GitHub Pages. A arquitetura reúne três responsabilidades.
 
-1. Dados
+1. Base pública de dados e mídia, com JSON versionado e IDs permanentes.
+2. Interface do Portal, responsável pela navegação, pelas páginas de leitura e pelos serviços compartilhados.
+3. Experiências HTML5, incluindo o cenário do Bairro Mágico, carregadas sob demanda dentro da interface.
 
-2. Interface Web (HTML)
-
-3. Interface 3D (Unity)
-
-Todas utilizizam a mesma base de dados pública.
-
-A separação entre dados e interface é um princípio permanente da arquitetura.
-
----
+As três partes evoluem por contratos comuns. A base de dados permanece separada da apresentação.
 
 # Dados
 
@@ -57,83 +51,21 @@ Arquivos auxiliares de autoria poderão utilizar outros formatos, como CSV, desd
 
 ---
 
-# Interface HTML
+# Interface do Portal
 
-A interface HTML constitui a principal porta de entrada do Portal.
+A interface apresenta Emli O’Mago, divulga projetos, permite leitura e compartilhamento e leva o visitante ao cenário do Bairro. Cabeçalho, navegação, acessibilidade, preferências, pesquisa, dados e player pertencem à interface do Portal e são reutilizados pelas experiências quando aplicável.
 
-Responsabilidades:
+# Bairro Mágico em HTML5
 
-- apresentar Emli O'Mago;
+O Bairro é a experiência principal de exploração espacial. É carregado sob demanda como um módulo JavaScript. A cena atual utiliza Canvas 2D para projetar geometria em três dimensões. Uma evolução pode usar WebGL nativo do navegador mediante necessidade, mantendo a mesma rota, os mesmos IDs de locais e a alternativa de navegação em HTML.
 
-- apresentar o Bairro Mágico;
+# Hospedagem das experiências
 
-- divulgar novidades;
+O modelo de composição segue o 777 Minigames. Assim como o TigerGameHost centraliza a hospedagem dos jogos, um contêiner do Portal concentra a inicialização, o ciclo de vida e os estados comuns das experiências. Os módulos mantêm sua própria lógica e renderização.
 
-- disponibilizar acesso rápido aos projetos;
+Os componentes compartilhados devem evoluir em um catálogo reutilizável, documentado com Storybook quando disponível no fluxo de desenvolvimento. A interface publicada deve funcionar de forma independente desse ambiente de desenvolvimento.
 
-- conduzir o visitante para a experiência 3D;
-
-- funcionar em qualquer navegador moderno.
-
-A versão HTML não deve reproduzir toda a experiência do Bairro Mágico.
-
-Seu objetivo é despertar curiosidade e facilitar o acesso às informações.
-
----
-
-# Interface Unity
-
-A interface Unity representa o Bairro Mágico.
-
-Responsabilidades:
-
-- exploração espacial;
-
-- interação com objetos;
-
-- descoberta de conteúdos;
-
-- reprodução musical;
-
-- minijogos;
-
-- acesso natural aos projetos.
-
-Sempre que possível utilizará exatamente a mesma base de dados consumida pelo Portal HTML.
-
----
-
-# Relação entre as Interfaces
-
-As interfaces não competem entre si.
-
-Cada uma possui objetivos distintos.
-
-## HTML
-
-- apresentação;
-
-- leitura;
-
-- navegação rápida;
-
-- indexação por mecanismos de busca;
-
-- compartilhamento de conteúdo.
-
-## Unity
-
-- exploração;
-
-- imersão;
-
-- descoberta;
-
-- interação.
-
-A experiência principal do Portal continua sendo o Bairro Mágico.
-
----
+O [Documento 015](015%20Experiencias%20HTML5%20e%20Integracao%20777.md) define o contrato do contêiner, os destinos externos e os critérios de aceitação.
 
 # Estrutura dos Repositórios
 
@@ -301,7 +233,7 @@ Exemplos:
 
 Todo conteúdo sujeito a atualização frequente deve permanecer separado da interface.
 
-Alterações de conteúdo nunca deverão exigir alteração do HTML ou da Unity.
+Alterações de conteúdo devem ser feitas nos dados e preservam o código das páginas e das experiências quando o schema permanece compatível.
 
 ---
 
@@ -378,23 +310,7 @@ portal/
 
 # Estratégia de Carregamento
 
-Cada interface poderá implementar sua própria estratégia de carregamento.
-
-O único requisito obrigatório é consumir a mesma base de dados pública.
-
-## Portal HTML
-
-O Portal HTML deverá carregar apenas os arquivos necessários para cada página.
-
-Arquivos especializados deverão ser carregados sob demanda.
-
-Sempre que um arquivo já estiver disponível em memória, deverá ser reutilizado.
-
-## Unity
-
-A Unity poderá utilizar estratégias próprias de pré-carregamento e carregamento progressivo conforme a necessidade da experiência tridimensional.
-
----
+Cada rota carrega apenas seus dados e módulos. Páginas de leitura reutilizam os arquivos presentes em memória. O cenário e seus recursos gráficos são carregados ao entrar no Bairro. O assistente inicia recursos adicionais após acionamento do visitante. Os fluxos compartilham a base e permanecem acessíveis se um recurso secundário falhar.
 
 # Cache
 
@@ -456,7 +372,11 @@ A arquitetura prioriza:
 
 - CSS3;
 
-- JavaScript puro.
+- JavaScript em módulos ES;
+
+- Canvas para a cena atual, com WebGL nativo como opção de renderização;
+
+- Storybook para documentação de componentes compartilhados no desenvolvimento.
 
 Bibliotecas externas somente poderão ser utilizadas quando oferecerem vantagens claras.
 
@@ -566,7 +486,7 @@ Dados e interface permanecem separados.
 
 ## 2.
 
-HTML e Unity compartilham a mesma base de dados.
+Páginas de leitura e experiências HTML5 compartilham a mesma base de dados.
 
 ## 3.
 
@@ -604,8 +524,6 @@ Cada interface pode otimizar seu carregamento desde que preserve a compatibilida
 
 # Questões Pendentes
 
-- arquitetura completa da versão Unity;
-
-- integração detalhada entre HTML e Unity;
+- adoção do contrato de experiências HTML5 pelo código do Portal;
 
 - definição do processo automatizado de geração dos arquivos públicos (build pipeline) (Manifest).

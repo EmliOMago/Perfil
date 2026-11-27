@@ -520,12 +520,14 @@ Os componentes devem aplicar automaticamente os comportamentos padronizados.
 
 # 14. Extensibilidade
 
+O contêiner de experiências usa os mesmos componentes de carregamento, erro, acessibilidade e navegação definidos para o Portal. O catálogo de desenvolvimento em Storybook documenta os componentes compartilhados e seus estados. A interface do visitante consome esses componentes diretamente.
+
 Novos componentes podem ser adicionados à biblioteca desde que:
 
 - não quebrem compatibilidade com os existentes;
 - mantenham arquitetura orientada a dados;
 - permaneçam reutilizáveis;
-- possam ser utilizados por HTML e/ou Unity;
+- possam ser utilizados nas páginas e experiências HTML5;
 - preservem baixo acoplamento.
 
 ---

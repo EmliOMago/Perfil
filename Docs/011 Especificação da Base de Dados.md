@@ -11,7 +11,7 @@
 
 Este documento define a arquitetura da base de dados utilizada pelo Portal Emli O'Mago, especificando a organização dos arquivos JSON, os relacionamentos entre eles, os identificadores permanentes, os contratos estruturais e as regras para evolução da base de dados.
 
-A base de dados constitui a fonte única de verdade do Portal e deve ser compartilhada integralmente pelas implementações HTML e Unity.
+A base de dados constitui a fonte única de verdade do Portal e deve ser compartilhada integralmente pelas páginas e experiências HTML5 do Portal.
 
 ---
 
@@ -23,7 +23,7 @@ A base de dados deve obedecer aos seguintes princípios:
 - independência da implementação;
 - baixo acoplamento;
 - reutilização máxima;
-- compatibilidade entre HTML e Unity;
+- compatibilidade entre páginas, cenário interativo e outros módulos HTML5;
 - extensibilidade;
 - versionamento independente do código;
 - simplicidade.

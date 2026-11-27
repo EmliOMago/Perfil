@@ -30,6 +30,8 @@ Toda navegação do Portal deve obedecer aos seguintes princípios:
 
 O usuário deve conseguir localizar, compreender e acessar qualquer conteúdo sem depender de conhecimento prévio da estrutura interna do Portal.
 
+O Bairro Mágico abre em uma rota interna HTML5. Jogos na navegação global e Arcade no Bairro abrem https://777minigames.com.br/games. Ligações a jogos específicos usam suas URLs oficiais, conforme os relacionamentos do catálogo.
+
 ---
 
 # 3. Modelo Geral
@@ -234,6 +236,8 @@ Onde:
 - slug melhora a legibilidade.
 
 ---
+
+Em GitHub Pages, a implementação atual usa o fragmento `#/tipo/id/slug` para manter links diretos em subdiretórios. A entrada do Bairro usa `#/bairro`. O ID permanece independente do renderizador.
 
 # 14. Histórico de Navegação
 

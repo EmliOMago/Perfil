@@ -102,9 +102,9 @@ A ausência de tradução não deve impedir a navegação.
 
 ---
 
-# 8. Contrato entre HTML e Unity
+# 8. Contrato entre páginas e experiências HTML5
 
-As implementações HTML e Unity compartilham exatamente a mesma base de dados.
+As páginas de leitura e as experiências HTML5 compartilham a base oficial do Portal.
 
 Consequentemente:
 
@@ -114,7 +114,7 @@ Consequentemente:
 - seguem as mesmas regras funcionais;
 - preservam comportamento equivalente.
 
-As diferenças entre implementações devem limitar-se exclusivamente aos aspectos internos da tecnologia utilizada.
+O contrato de dados independe do renderizador. O contrato de integração das experiências com o Portal está definido no Documento 015.
 
 ---
 
@@ -178,7 +178,7 @@ Duplicações arquiteturais devem ser evitadas.
 
 | Termo          | Definição                                                            |
 | -------------- | -------------------------------------------------------------------- |
-| Base de Dados  | Conjunto oficial de arquivos JSON compartilhados entre HTML e Unity. |
+| Base de Dados  | Conjunto oficial de arquivos JSON compartilhados entre páginas e experiências HTML5. |
 | Conteúdo       | Qualquer entidade navegável do Portal.                               |
 | Schema         | Especificação estrutural de um tipo de arquivo JSON.                 |
 | ID Permanente  | Identificador único e imutável de um conteúdo.                       |
@@ -223,7 +223,7 @@ Este documento define:
 - convenções gerais da arquitetura;
 - nomenclatura;
 - internacionalização;
-- contratos entre HTML e Unity;
+- contratos entre páginas e experiências HTML5;
 - organização lógica da base de dados;
 - ciclo de vida do conteúdo;
 - extensibilidade;

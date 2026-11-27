@@ -1,36 +1,26 @@
-# Portal Emli O'Mago
+# Portal Emli O’Mago
 
-Portal oficial de Emli O'Mago.
+O portal é estático. O menu **Jogos** e o Arcade no Bairro abrem o catálogo público do 777 Minigames. A ficha de Tiger Forest Defense oferece acesso à partida direta, ao catálogo e a dois outros jogos do 777.
 
-## Estrutura
+## Publicação no GitHub Pages
 
-```
-/
-├── index.html
-├── 404.html
-├── manifest.json
-├── robots.txt
-├── sitemap.xml
-├── css/
-├── js/
-├── img/
-├── audio/
-├── video/
-├── i18n/
-├── docs/
-└── .github/
-```
+1. Extraia o ZIP e copie o **conteúdo da pasta `Perfil`** para a raiz da sua cópia de trabalho. Mantenha `.nojekyll` junto de `index.html`.
+2. Confira as alterações em uma branch de trabalho antes de integrá-las à branch de publicação. Os arquivos da versão anterior que sobrarem na pasta podem ser identificados na revisão.
+3. Em **Settings → Pages**, selecione **Deploy from a branch** e a pasta **/(root)** da branch desejada. A branch padrão encontrada no repositório é `main`. Se já houver um fluxo de publicação, revise o destino antes de alterá-lo.
+4. Depois da publicação, confira Início, Projetos, Jogos e Bairro Mágico. Abra também um link interno copiado em outra aba e recarregue-o.
 
-## Tecnologias
+[Repositório Perfil](https://github.com/EmliOMago/Perfil) · [Documentação do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
-- HTML5
-- CSS3
-- JavaScript (ES Modules)
+## Teste local
 
-## Publicação
+Na pasta `Perfil`, execute `python scripts/servir.py` e abra **http://127.0.0.1:4173/**. Use um servidor HTTP para que o navegador possa carregar módulos e JSON. Rode `python scripts/validar.py` antes de publicar alterações nos dados.
 
-O projeto é publicado utilizando GitHub Pages.
+## Atualização de conteúdo
 
-## Licença
+Os arquivos em `data/` são a cópia inicial do catálogo. Para usar **ArquivosNoGitHub**, publique a árvore `data/` completa, incluindo `media/`, em uma URL pública com CORS e ajuste `baseDados` no `config.json`. `baseReserva` aponta para a cópia que acompanha o portal. Mantenha índices e mídia da mesma revisão nas duas bases. Use IDs estáveis ao cadastrar obras e atualize `indice.json` e `projetos.json` conforme o tipo. Os schemas estão em `data/schemas/`.
 
-Conforme definido pelo projeto.
+Os dicionários de interface estão em `data/idiomas/`. O conteúdo começa em português. Para traduzir um registro, adicione `traducoes.en` e os campos traduzidos no registro e no índice quando usados pela busca.
+
+A maquete 3D em HTML5 funciona no navegador e usa os destinos de `data/locais.json`. O Documento 015 define a integração do Bairro com o contêiner de experiências do Portal. O guia percorre esses locais sem IA. A opção experimental conversa em português com o modelo local do planejamento, via WebGPU e download voluntário. A inferência depende do navegador e do hardware. A conversa fica em memória durante a visita. A disponibilidade do modelo externo e a inferência em hardware compatível requerem validação própria.
+
+Para habilitar o player, inclua as faixas autorizadas em `data/media/` e cadastre registros com `id`, `ativo`, `titulo` e `arquivo` no `conteudo` de `data/musicas.json`. As imagens usadas na interface e no catálogo foram extraídas do portfólio fornecido. O e-mail profissional vem do documento de identidade do autor.

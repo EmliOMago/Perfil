@@ -11,7 +11,7 @@
 
 Este documento define a política de versionamento da base de dados do Portal Emli O'Mago, os critérios de compatibilidade entre versões, a organização do repositório de dados e o processo oficial de publicação.
 
-O objetivo é permitir a evolução contínua da base de dados sem comprometer a estabilidade das implementações HTML e Unity.
+O objetivo é permitir a evolução contínua da base de dados sem comprometer a estabilidade das páginas e experiências HTML5.
 
 ---
 
@@ -124,6 +124,8 @@ A publicação de alterações deve seguir a seguinte sequência:
 Arquivos inválidos não devem ser publicados.
 
 ---
+
+A publicação da interface e das experiências usa os arquivos estáticos do GitHub Pages. Cada revisão publicada deve manter módulos, recursos e dados com versões compatíveis e caminhos que funcionem a partir do subdiretório do repositório.
 
 # 10. Integridade
 

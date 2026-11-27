@@ -2,7 +2,7 @@
 
 ## Portal Emli O'Mago
 
-Versão: 1.0  
+Versão: 1.1  
 Status: Em construção
 
 ---
@@ -405,11 +405,13 @@ Portal HTML:
 
 - carregar categorias sob demanda.
 
-Unity:
+Bairro Mágico em HTML5:
 
-- estratégia própria;
+- dados e recursos da cena carregados sob demanda;
 
-- mesma base de dados.
+- mesma base do Portal, com IDs e relacionamentos compartilhados;
+
+- destinos externos referenciados pelo ID do link.
 
 ---
 

@@ -9,12 +9,11 @@ O'Mago para servir como referência permanente durante o desenvolvimento.
 
 ## Ideia central
 
-O projeto **não é um site tradicional**. O site 2D é o hall de entrada
-para um universo navegável em 3D desenvolvido na Unity (WebGL).
+As páginas de leitura são a entrada para o Bairro Mágico, um cenário navegável em 3D executado no mesmo Portal HTML5.
 
-A versão HTML existe para:
+As páginas de leitura existem para:
 
-- ser encontrada por mecanismos de busca;
+- aparecer em mecanismos de busca;
 - carregar rapidamente;
 - funcionar em qualquer dispositivo;
 - apresentar o universo;
@@ -70,15 +69,13 @@ Repositórios:
 - Perfil → interface pública.
 - ArquivosNoGitHub → dados públicos (JSON, imagens, áudio, vídeo).
 
-O HTML contém apenas estrutura.
-
-O conteúdo é carregado dinamicamente por arquivos JSON.
+O HTML estrutura a interface, e os módulos JavaScript carregam os dados em JSON conforme a navegação. O Bairro é montado sob demanda em um contêiner de experiências inspirado no TigerGameHost do 777 Minigames. O menu Jogos e o Arcade apontam para o catálogo oficial do 777.
 
 ## Evolução
 
 Toda nova funcionalidade deve preservar esta regra:
 
-> O perfil 2D apresenta o universo. O Bairro Mágico é a experiência
+> As páginas de leitura apresentam o universo. O Bairro Mágico é a experiência
 > principal.
 
 O botão **Entrar no Cenário 3D** é permanente desde a primeira versão e representa o acesso principal ao universo.
@@ -107,5 +104,5 @@ Preferir termos como:
 Manter um único ecossistema em que o mesmo conjunto de dados alimenta:
 
 - Portal HTML;
-- Bairro Mágico em Unity;
+- Bairro Mágico em HTML5;
 - futuros aplicativos e experiências.

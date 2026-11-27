@@ -2,7 +2,7 @@
 
 ## Portal Emli O'Mago
 
-Versão: 1.2  
+Versão: 1.3  
 Status: Em construção
 
 ---
@@ -29,7 +29,7 @@ Os dados representam a única fonte oficial de informação.
 
 ## 3.
 
-HTML, Unity e futuras aplicações utilizam exatamente a mesma base de dados.
+As páginas e experiências HTML5 do Portal utilizam a mesma base de dados. Futuras aplicações podem reutilizá-la preservando os contratos.
 
 ## 4.
 
@@ -617,9 +617,13 @@ No Portal HTML:
 
 - carregar arquivos especializados sob demanda.
 
-Na Unity:
+No cenário HTML5 do Bairro:
 
-- permitir pré-carregamento conforme necessidade da experiência.
+- carregar o módulo e seus recursos ao entrar na rota do Bairro;
+
+- reutilizar IDs, locais e mídia do catálogo;
+
+- pré-carregar apenas recursos úteis à exploração atual.
 
 ---
 

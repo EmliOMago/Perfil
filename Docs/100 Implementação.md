@@ -14,4 +14,10 @@
 12. Player
 13. Páginas
 14. Inicialização
-15. Ajustes finais
+15. Contêiner HTML5 de experiências e componentes compartilhados
+16. Bairro Mágico como módulo com carregamento sob demanda
+17. Estados de falha, lista de locais e liberação de recursos ao sair
+18. Validação do Arcade, dos links oficiais e da publicação estática
+19. Ajustes finais
+
+O Documento 015 orienta a integração. A implementação deve remover o campo legado `unityUrl` e seus controles associados na próxima revisão de código.
