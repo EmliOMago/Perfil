@@ -33,6 +33,24 @@ const t = key => ui?.[key] ?? defaultUi?.[key] ?? key
 const local = (entry, key) => entry?.traducoes?.[language]?.[key] ?? entry?.[key]
 const route = (id, entry = db.index[id]) => entry ? `#/${entry.tipo}/${id}/${entry.slug}` : '#/'
 const gamesRoute = '#/jogos'
+const siteRoot = new URL('../', import.meta.url)
+const publicRoutes = !!document.querySelector('meta[name="portal-share-pages"]')
+const publicSections = new Set(['jogos', 'bairro', 'pesquisa'])
+
+function publicAddress(key) {
+  if (!publicRoutes) return key
+  const [path, query] = key.slice(2).split('?')
+  if (!path) return siteRoot.pathname
+  const [type, id] = path.split('/')
+  const page = publicSections.has(path) ? path
+    : db?.index[id]?.tipo === type ? id.toLowerCase() : ''
+  return page ? new URL(`p/${page}/${query ? '?' + query : ''}`, siteRoot).href : key
+}
+
+function routeAttrs(href) {
+  if (!href.startsWith('#/')) return `href="${html(href)}"`
+  return `href="${html(publicAddress(href))}" data-route="${html(href)}"`
+}
 const officialOrigins = new Set(['https://777minigames.com.br', 'https://www.777minigames.com.br'])
 const linkUrl = id => Object.hasOwn(db.links, id)
   ? safeUrl(db.links[id].url, ['https:', 'http:', 'mailto:']) : ''
@@ -40,7 +58,7 @@ const is777 = href => /^https:\/\//.test(href) && officialOrigins.has(new URL(hr
 const target = id => id && id === settings.catalogo ? gamesRoute : linkUrl(id) || route(id)
 const name = id => local(db.index[id] ?? db.links[id], 'titulo')
 const anchor = (label, href, style = '') => href
-  ? `<a class="${style}" href="${html(href)}">${html(label)}</a>` : ''
+  ? `<a class="${style}" ${routeAttrs(href)}>${html(label)}</a>` : ''
 const button = (label, href, style = '') => anchor(label, href, `button ${style}`)
 const externalButton = (label, href, style = '') => href
   ? `<a class="button ${style}" href="${html(href)}" target="_blank" rel="noopener noreferrer">${html(label)}</a>` : ''
@@ -54,7 +72,7 @@ function card(item) {
   const title = local(item, 'titulo')
   const art = item.imagens?.[0]
   const style = item.categorias.includes('jogo') ? 'card-art logo-art' : 'card-art'
-  return `<a class="card" href="${route(item.id, item)}">
+  return `<a class="card" ${routeAttrs(route(item.id, item))}>
     ${image(art, '', style)}
     <div class="card-copy">
       ${item.rotulo ? `<span class="kicker">${html(local(item, 'rotulo'))}</span>` : ''}
@@ -273,7 +291,7 @@ function chrome(routeName) {
   $('#menu').innerHTML = settings.menu.map(entry => {
     const href = entry.rotulo === 'games' ? gamesRoute : entry.rota ?? target(entry.id)
     const current = href.startsWith('#') && href === routeName
-    return `<a href="${html(href)}"${current ? ' aria-current="page"' : ''}>${html(t(entry.rotulo))}</a>`
+    return `<a ${routeAttrs(href)}${current ? ' aria-current="page"' : ''}>${html(t(entry.rotulo))}</a>`
   }).join('')
   $('#social').innerHTML = settings.redes.filter(id => id !== 'LNK006').map(id => anchor(name(id), target(id))).join('')
   $('#top-map').textContent = t('bairro')
@@ -284,12 +302,24 @@ function chrome(routeName) {
   updatePlayer()
 }
 
-function routeKey() { return location.hash || '#/' }
+function routeKey() {
+  if (location.hash.startsWith('#/')) return location.hash
+  if (!publicRoutes || !location.pathname.startsWith(siteRoot.pathname)) return '#/'
+  const page = /^p\/([a-z0-9]+)\/?$/i.exec(location.pathname.slice(siteRoot.pathname.length))?.[1]
+  if (!page) return '#/'
+  if (publicSections.has(page)) return '#/' + page + (page === 'pesquisa' ? location.search : '')
+  return route(page.toUpperCase())
+}
+
+function navigate(key, state = {}) {
+  history.pushState(state, '', publicAddress(key))
+  if (db) render({ focus: true })
+}
 const scrollKey = key => `emli:scroll:${key}`
 function setContext(ids, label) {
   if (!ids.length) return
   for (const link of content.querySelectorAll('a.card')) {
-    if (ids.some(id => route(id) === link.hash)) {
+    if (ids.some(id => route(id) === (link.dataset.route || link.hash))) {
       link.dataset.context = JSON.stringify({ ids, label, origin: currentRoute })
     }
   }
@@ -411,7 +441,7 @@ $('#prefs-button').onclick = () => {
 $('#search-button').onclick = () => {
   if (!db) return
   if (routeKey().startsWith('#/pesquisa')) $('#search-form [name=q]')?.focus()
-  else location.hash = '#/pesquisa'
+  else navigate('#/pesquisa')
 }
 $('#skip').onclick = event => { event.preventDefault(); main.focus() }
 
@@ -420,7 +450,7 @@ content.addEventListener('submit', event => {
   event.preventDefault()
   const params = new URLSearchParams(new FormData(event.target))
   const url = `#/pesquisa?${params}`
-  if (routeKey() !== url) location.hash = url
+  if (routeKey() !== url) navigate(url)
 })
 content.addEventListener('click', event => {
   const gallery = event.target.closest('[data-image]')
@@ -445,15 +475,15 @@ content.addEventListener('error', event => {
 }, true)
 
 document.addEventListener('click', event => {
-  const link = event.target.closest('a[href^="#/"]')
+  const link = event.target.closest('a[data-route], a[href^="#/"]')
   if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
-  if (link.hash === routeKey()) return
+  const key = link.dataset.route || link.hash
   event.preventDefault()
+  if (key === routeKey()) return
   const next = link.dataset.context ? JSON.parse(link.dataset.context)
-    : /^#\/projeto\//.test(link.hash) && /^#\/projeto\//.test(currentRoute) ? history.state?.context : null
-  const catalogBack = link.hash === gamesRoute && currentRoute.startsWith('#/') ? currentRoute : undefined
-  history.pushState({ context: next, catalogBack }, '', link.hash)
-  if (db) render({ focus: true })
+    : /^#\/projeto\//.test(key) && /^#\/projeto\//.test(currentRoute) ? history.state?.context : null
+  const catalogBack = key === gamesRoute && currentRoute.startsWith('#/') ? currentRoute : undefined
+  navigate(key, { context: next, catalogBack })
 })
 window.addEventListener('hashchange', () => { if (db && currentRoute !== routeKey()) render({ focus: true }) })
 window.addEventListener('popstate', () => { if (db && currentRoute !== routeKey()) render({ focus: true }) })
@@ -465,6 +495,13 @@ try {
   defaultUi = await db.get(`idiomas/${settings.idiomaPadrao}.json`)
   const saved = storage.get('emli:language')
   await loadLanguage(Object.hasOwn(settings.idiomas, saved) ? saved : settings.idiomaPadrao)
+  if (publicRoutes) {
+    if (location.hash.startsWith('#/')) history.replaceState(history.state, '', publicAddress(routeKey()))
+    for (const link of document.querySelectorAll('header a[href^="#/"]')) {
+      link.dataset.route = link.hash
+      link.href = publicAddress(link.hash)
+    }
+  }
   await render()
   db.get(settings.faixas).then(items => {
     tracks = Object.values(items).filter(track => track.ativo && track.arquivo && safeUrl(db.media(track.arquivo)))
