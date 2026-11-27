@@ -1,7 +1,7 @@
 {
   "id": "JOGOS",
   "versaoSchema": "1.0.0",
-  "versaoDados": "1.0.0",
+  "versaoDados": "1.0.1",
   "tipo": "jogos",
   "conteudo": {
     "JOG001": {
@@ -183,7 +183,7 @@
       "ativo": true,
       "tipo": "projeto",
       "slug": "tiger-forest-defense",
-      "titulo": "Tiger Forest Defense",
+      "titulo": "Tiger Fly Attack",
       "resumo": "Um dos jogos do 777 Minigames, com acesso à partida pelo site oficial.",
       "categorias": [
         "jogo"
@@ -194,12 +194,14 @@
       ],
       "links": [
         "LNK002",
-        "LNK001",
-        "LNK008",
-        "LNK009"
+        "LNK001"
       ],
       "relacionados": [
-        "CAT001"
+        "CAT001",
+        "COL001"
+      ],
+      "imagens": [
+        "media/game-tiger-fly-attack-d68f9112-244.png"
       ]
     }
   }
