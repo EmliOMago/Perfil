@@ -1,7 +1,7 @@
 {
   "id": "AGRUPAMENTOS",
   "versaoSchema": "1.0.0",
-  "versaoDados": "1.0.0",
+  "versaoDados": "1.0.4",
   "tipo": "agrupamentos",
   "conteudo": {
     "CAT001": {
@@ -19,6 +19,15 @@
       ],
       "itens": [
         "JOG007"
+      ],
+      "relacionados": [
+        "JOG007",
+        "COL001",
+        "SER001",
+        "TAG001",
+        "TAG003",
+        "TAG004",
+        "TAG005"
       ]
     },
     "CAT002": {
@@ -34,7 +43,15 @@
       "itens": [
         "PRJ008",
         "PRJ009",
-        "PRJ010"
+        "PRJ010",
+        "COL001",
+        "SER001"
+      ],
+      "relacionados": [
+        "PRJ008",
+        "PRJ009",
+        "PRJ010",
+        "COL001"
       ]
     },
     "COL001": {
@@ -43,17 +60,21 @@
       "tipo": "colecao",
       "slug": "projetos-autorais",
       "titulo": "Projetos autorais",
-      "resumo": "Jogos de diferentes gêneros apresentados no portfólio de Emli.",
+      "resumo": "Jogos de diferentes gêneros do portfólio de Emli.",
       "categorias": [
         "jogo"
       ],
       "itens": [
-        "JOG001",
-        "JOG002",
-        "JOG003",
-        "JOG004",
-        "JOG005",
-        "JOG006"
+        "CAT001",
+        "CAT002",
+        "JOG007",
+        "SER001"
+      ],
+      "relacionados": [
+        "JOG007",
+        "PRJ010",
+        "CAT002",
+        "PRJ009"
       ]
     },
     "SER001": {

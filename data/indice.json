@@ -1,7 +1,7 @@
 {
   "id": "INDICE",
   "versaoSchema": "1.0.0",
-  "versaoDados": "1.0.1",
+  "versaoDados": "1.0.6",
   "tipo": "indice",
   "conteudo": {
     "JOG001": {
@@ -168,7 +168,8 @@
         "jogo"
       ],
       "tags": [],
-      "layout": "detalhe"
+      "layout": "detalhe",
+      "ativo": true
     },
     "CAT002": {
       "arquivo": "agrupamentos.json",
@@ -180,19 +181,21 @@
         "cultura"
       ],
       "tags": [],
-      "layout": "detalhe"
+      "layout": "detalhe",
+      "ativo": true
     },
     "COL001": {
       "arquivo": "agrupamentos.json",
       "tipo": "colecao",
       "slug": "projetos-autorais",
       "titulo": "Projetos autorais",
-      "resumo": "Jogos de diferentes gêneros apresentados no portfólio de Emli.",
+      "resumo": "Jogos de diferentes gêneros do portfólio de Emli.",
       "categorias": [
         "jogo"
       ],
       "tags": [],
-      "layout": "detalhe"
+      "layout": "detalhe",
+      "ativo": true
     },
     "SER001": {
       "arquivo": "agrupamentos.json",
@@ -204,7 +207,8 @@
         "cultura"
       ],
       "tags": [],
-      "layout": "detalhe"
+      "layout": "detalhe",
+      "ativo": true
     },
     "TAG001": {
       "arquivo": "agrupamentos.json",
@@ -214,7 +218,8 @@
       "resumo": "Explore os conteúdos relacionados a este tema.",
       "categorias": [],
       "tags": [],
-      "layout": "detalhe"
+      "layout": "detalhe",
+      "ativo": true
     },
     "TAG002": {
       "arquivo": "agrupamentos.json",
